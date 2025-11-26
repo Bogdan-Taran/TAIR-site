@@ -1,0 +1,345 @@
+:root {
+    --padding-page: 80px;
+    --font-size-h2: 25px;
+    --dark-background-color: #121212;
+    --padding-beteen-sections: 60px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a00;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c00;
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #a00 #0a0a0a;
+}
+
+@media (hover: none) and (pointer: coarse) {
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    html {
+        scrollbar-width: none;
+    }
+}
+
+
+
+
+.button-base {
+    padding: 10px 30px;
+    font-family: 'Oswald';
+    border-radius: 15px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    letter-spacing: 1px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Oswald */
+@font-face {
+    font-family: 'Oswald';
+    src: url("../fonts/Oswald.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Roboto-condensed */
+@font-face {
+    font-family: 'Roboto-Condensed';
+    src: url('../fonts/RobotoCondensed-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Montserrat */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    background-color: var(--dark-background-color);
+    color: white;
+}
+
+
+/* шапка */
+.main-header {
+    background-color: #000;
+    border-bottom: 1px solid #333;
+    padding: 15px 0;
+}
+
+.container {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 0 var(--padding-page);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-family: 'Oswald';
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 45px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+    font-family: 'Montserrat';
+}
+
+.main-nav a:hover {
+    color: #ddd;
+}
+
+
+/* hero section */
+.hero {
+    padding: 0 var(--padding-page);
+    height: 150vh;
+    background: url('../src/assets/hero_photo.png') no-repeat;
+    /* background-size: cover; */
+    background-size: 70% auto;
+    background-position: top;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.hero-content {
+    text-align: left;
+    z-index: 2;
+    max-width: 800px;
+}
+
+
+.hero-subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.8;
+    font-family: 'Montserrat';
+}
+
+.cta-button {
+    background: linear-gradient(#9F040D, #690208);
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background: rgb(141, 69, 69);
+    transform: scale(1.05);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 80px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+/* ---------------------- О клубе ТАИР ------------------------- */
+
+.about-club {
+    background-color: var(--dark-background-color);
+    padding: 0 0;
+    position: relative;
+}
+
+.about-club-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.about-club-image {
+    flex: 0 0 50%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+}
+
+.about-club-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.about-club-image img:hover {
+    transform: scale(1.02);
+}
+
+.about-club-text-and-image {
+    flex: 0 0 50%;
+    padding: 20px;
+    background: rgba(30, 30, 30, 0.6);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.about-club-text-and-image h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.about-club-text-and-image p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.about-club-group-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.about-club-group-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.about-club-group-image img:hover {
+    transform: scale(1.03);
+}
+
+.about-club-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cta-button {
+    background: #d00;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background: #b00;
+    transform: scale(1.05);
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .about-club-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-club-image,
+    .about-club-text-and-image {
+        flex: 0 0 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-club {
+        padding: 60px 20px;
+    }
+
+    .about-club-text-and-image {
+        padding: 15px;
+    }
+
+    .about-club-text-and-image h2 {
+        font-size: 28px;
+    }
+
+    .about-club-group-image {
+        margin-top: 15px;
+    }
+}
