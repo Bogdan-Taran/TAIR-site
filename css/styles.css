@@ -1,6 +1,7 @@
 :root {
     --padding-page: 80px;
-    --font-size-h2: 25px;
+    --font-size-h2: 36px;
+    --font-size-p: 14px;
     --dark-background-color: #121212;
     --padding-beteen-sections: 60px;
 }
@@ -222,22 +223,24 @@ body {
 
 .about-club {
     background-color: var(--dark-background-color);
-    padding: 0 0;
+    padding: 0 var(--padding-beteen-sections);
     position: relative;
+    max-height: 600px;
+    height: 600px;
 }
 
 .about-club-content {
     display: flex;
-    gap: 40px;
+    /* gap: 40px; */
     align-items: center;
-    margin-bottom: 40px;
+    align-content: stretch;
+    justify-content: space-between;
 }
 
 .about-club-image {
-    flex: 0 0 50%;
+    flex: 0 0 35%;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
 }
 
 .about-club-image img {
@@ -252,21 +255,21 @@ body {
 }
 
 .about-club-text-and-image {
-    flex: 0 0 50%;
-    padding: 20px;
-    background: rgba(30, 30, 30, 0.6);
+    flex: 0 0 60%;
     border-radius: 10px;
     backdrop-filter: blur(5px);
 }
 
 .about-club-text-and-image h2 {
-    font-size: 36px;
+    font-size: var(--font-size-h2);
+    font-family: 'Roboto-Condensed';
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
 
 .about-club-text-and-image p {
-    font-size: 16px;
+    font-size: var(--font-size-p);
+    font-family: 'Montserrat';
     line-height: 1.6;
     margin-bottom: 30px;
     opacity: 0.9;
@@ -291,22 +294,22 @@ body {
 }
 
 .about-club-button {
+    display: flex;
+    justify-content: end;
     text-align: center;
     margin-top: 30px;
 }
 
-.cta-button {
-    background: #d00;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: 16px;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
+.cta-about-club-button{
+    background: linear-gradient(#9F040D, #690208);
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
+
+/* .cta-button {
+    background: linear-gradient(#9F040D, #690208);
+    text-transform: uppercase;
+    
+} */
 
 .cta-button:hover {
     background: #b00;
