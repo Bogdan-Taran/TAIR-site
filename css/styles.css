@@ -305,16 +305,8 @@ body {
     text-transform: uppercase;
 }
 
-/* .cta-button {
-    background: linear-gradient(#9F040D, #690208);
-    text-transform: uppercase;
-    
-} */
 
-.cta-button:hover {
-    background: #b00;
-    transform: scale(1.05);
-}
+
 
 /* Адаптивность */
 @media (max-width: 992px) {
@@ -346,3 +338,211 @@ body {
         margin-top: 15px;
     }
 }
+
+
+
+
+
+
+
+
+/* --------------------------- Наши направления --------------------------- */
+
+.directions {
+    background: linear-gradient(135deg, #500, #200);
+    padding: 80px var(--padding-page);
+    margin: 80px 0 0 0px;
+    box-shadow: #000;
+    box-shadow: inset 0 70px 40px -30px rgba(0, 0, 0, 0.6), 
+    inset 0 -70px 40px -30px rgba(0, 0, 0, 0.6);
+  }
+  
+  .section-title {
+    font-size: var(--font-size-h2);
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    color: white;
+    position: relative;
+    font-family: 'Roboto-Condensed';
+  }
+  
+  
+
+  /* -------------------------- Карточки направлений start -------------------------- */
+
+
+  .directions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .card {
+    background: #000;
+    border-radius: 15px;
+    overflow: hidden; 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; 
+    padding: 12px;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: transform 0.4s ease;
+  }
+  
+  .card:hover img {
+    transform: scale(1.03);
+  }
+  
+  .card-content {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .card-content h3 {
+    font-weight: 400;
+    font-family: 'Oswald';
+    color: white;
+    font-size: 18px;
+    margin: 0;
+    letter-spacing: 1.5px;
+  }
+  /* -------------------------- Карточки направлений end -------------------------- */
+  
+
+
+
+
+
+
+  /* --------------------------- Наши филиалы --------------------------- */
+  
+.branch-container{
+    padding-top: var(--padding-beteen-sections);
+}
+
+  .branches-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 96px;
+    position: relative;
+  }
+  
+  .branch-card {
+    background: rgba(0, 0, 0);
+    border-radius: 28px;
+    padding: 25px;
+    /* backdrop-filter: blur(10px); */
+    /* box-shadow: 0 5px 20px rgba(0,0,0,0.5); */
+    transition: transform 0.3s ease;
+  }
+  
+  .branch-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  }
+  
+  .branch-card h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #A1A1A1;
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: 'Oswald';
+  }
+  
+  .branch-info {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-evenly;
+  }
+  .branch-info-icon{
+    height: 36px;
+    width: auto;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 10px;
+    color: #A1A1A1;
+    font-size: 16px;
+    font-family: 'Montserrat';
+  }
+
+  .info-item .column{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .cta-btn-branches{
+        background: linear-gradient(#9F040D, #690208);
+        text-transform: uppercase;
+  }
+  
+  
+  .gloves-icon {
+    width: 120px;
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    height: auto;
+    filter: drop-shadow(0 0 3px rgba(255,255,255,0.3));
+  }
+  
+
+  
+
+  
+  /* Адаптивность */
+  @media (max-width: 992px) {
+    .directions-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .directions {
+      padding: 60px 20px;
+    }
+  
+    .section-title {
+      font-size: 28px;
+    }
+  
+    .directions-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .branches-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .branch-card {
+      padding: 20px;
+    }
+  
+    .branch-footer {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .gloves-icon {
+      width: 40px;
+    }
+  }
