@@ -1,218 +1,219 @@
 :root {
-    --padding-page: 80px;
-    --font-size-h2: 36px;
-    --font-size-p: 14px;
-    --dark-background-color: #121212;
-    --padding-beteen-sections: 60px;
+  --padding-page: 80px;
+  --font-size-h2: 36px;
+  --font-size-p: 14px;
+  --dark-background-color: #121212;
+  --padding-beteen-sections: 60px;
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #0a0a0a;
-    border-radius: 4px;
+  background: #0a0a0a;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #a00;
-    border-radius: 4px;
-    transition: background 0.2s ease;
+  background: #a00;
+  border-radius: 4px;
+  transition: background 0.2s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #c00;
+  background: #c00;
 }
 
 html {
-    scrollbar-width: thin;
-    scrollbar-color: #a00 #0a0a0a;
+  scrollbar-width: thin;
+  scrollbar-color: #a00 #0a0a0a;
 }
 
 @media (hover: none) and (pointer: coarse) {
 
-    ::-webkit-scrollbar {
-        display: none;
-    }
-    html {
-        scrollbar-width: none;
-    }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html {
+    scrollbar-width: none;
+  }
 }
 
 
 
 
 .button-base {
-    padding: 10px 30px;
-    font-family: 'Oswald';
-    border-radius: 15px;
-    font-size: 16px;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-    letter-spacing: 1px;
+  padding: 10px 30px;
+  font-family: 'Oswald';
+  border-radius: 15px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  letter-spacing: 1px;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Oswald */
 @font-face {
-    font-family: 'Oswald';
-    src: url("../fonts/Oswald.ttf") format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Oswald';
+  src: url("../fonts/Oswald.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Roboto-condensed */
 @font-face {
-    font-family: 'Roboto-Condensed';
-    src: url('../fonts/RobotoCondensed-Regular.ttf');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Roboto-Condensed';
+  src: url('../fonts/RobotoCondensed-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Montserrat */
 @font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/Montserrat-Regular.ttf');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
 }
 
 
 body {
-    background-color: var(--dark-background-color);
-    color: white;
+  background-color: var(--dark-background-color);
+  color: white;
 }
 
 
 /* шапка */
 .main-header {
-    background-color: #000;
-    border-bottom: 1px solid #333;
-    padding: 15px 0;
+  background-color: #000;
+  border-bottom: 1px solid #333;
+  padding: 15px 0;
 }
 
 .container {
-    /* max-width: 1200px; */
-    margin: 0 auto;
-    padding: 0 var(--padding-page);
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 0 var(--padding-page);
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .logo img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .logo-text {
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    font-family: 'Oswald';
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-family: 'Oswald';
 }
 
 .main-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 45px;
+  display: flex;
+  list-style: none;
+  gap: 45px;
 }
 
 .main-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.2s;
-    font-family: 'Montserrat';
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+  font-family: 'Montserrat';
 }
 
 .main-nav a:hover {
-    color: #ddd;
+  color: #ddd;
 }
 
 
 /* hero section */
 .hero {
-    padding: 0 var(--padding-page);
-    height: 150vh;
-    background: url('../src/assets/hero_photo.png') no-repeat;
-    /* background-size: cover; */
-    background-size: 70% auto;
-    background-position: top;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-    overflow: hidden;
+  padding: 0 var(--padding-page);
+  height: 150vh;
+  background: url('../src/assets/hero_photo.png') no-repeat;
+  /* background-size: cover; */
+  background-size: 70% auto;
+  background-position: top;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
 
 }
 
 
 .hero-content {
-    text-align: left;
-    z-index: 2;
-    max-width: 800px;
+  text-align: left;
+  z-index: 2;
+  max-width: 800px;
 }
 
 
 .hero-subtitle {
-    font-size: 18px;
-    margin-bottom: 30px;
-    opacity: 0.8;
-    font-family: 'Montserrat';
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.8;
+  font-family: 'Montserrat';
 }
 
 .cta-button {
-    background: linear-gradient(#9F040D, #690208);
-    text-transform: uppercase;
+  background: linear-gradient(#9F040D, #690208);
+  text-transform: uppercase;
 }
 
 .cta-button:hover {
-    background: rgb(141, 69, 69);
-    transform: scale(1.05);
+  background: rgb(141, 69, 69);
+  transform: scale(1.05);
 }
 
 /* Адаптивность */
 @media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        gap: 15px;
-    }
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-    .main-nav ul {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  .main-nav ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    .hero-title {
-        font-size: 80px;
-    }
+  .hero-title {
+    font-size: 80px;
+  }
 
-    .hero-subtitle {
-        font-size: 16px;
-    }
+  .hero-subtitle {
+    font-size: 16px;
+  }
 }
 
 
@@ -222,87 +223,88 @@ body {
 /* ---------------------- О клубе ТАИР ------------------------- */
 
 .about-club {
-    background-color: var(--dark-background-color);
-    padding: 0 var(--padding-beteen-sections);
-    position: relative;
-    max-height: 600px;
-    height: 600px;
+  background-color: var(--dark-background-color);
+  padding: 0 var(--padding-beteen-sections);
+  position: relative;
+  max-height: 600px;
+  height: 600px;
 }
 
 .about-club-content {
-    display: flex;
-    /* gap: 40px; */
-    align-items: center;
-    align-content: stretch;
-    justify-content: space-between;
+  display: flex;
+  /* gap: 40px; */
+  align-items: center;
+  align-content: stretch;
+  justify-content: space-between;
 }
 
 .about-club-image {
-    flex: 0 0 35%;
-    overflow: hidden;
-    border-radius: 10px;
+  flex: 0 0 35%;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .about-club-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .about-club-image img:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .about-club-text-and-image {
-    flex: 0 0 60%;
-    border-radius: 10px;
-    backdrop-filter: blur(5px);
+  flex: 0 0 60%;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
 }
 
 .about-club-text-and-image h2 {
-    font-size: var(--font-size-h2);
-    font-family: 'Roboto-Condensed';
-    margin-bottom: 20px;
-    letter-spacing: 1px;
+  font-size: var(--font-size-h2);
+  font-family: 'Roboto-Condensed';
+  margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
 .about-club-text-and-image p {
-    font-size: var(--font-size-p);
-    font-family: 'Montserrat';
-    line-height: 1.6;
-    margin-bottom: 30px;
-    opacity: 0.9;
+  font-size: var(--font-size-p);
+  font-family: 'Montserrat';
+  line-height: 1.6;
+  margin-bottom: 30px;
+  opacity: 0.9;
 }
 
 .about-club-group-image {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 8px;
-    margin-top: 20px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-top: 20px;
 }
 
 .about-club-group-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .about-club-group-image img:hover {
-    transform: scale(1.03);
+  transform: scale(1.03);
 }
 
-.about-club-button, .view-the-halls-button {
-    display: flex;
-    justify-content: end;
-    text-align: center;
-    margin-top: 30px;
+.about-club-button,
+.view-the-halls-button {
+  display: flex;
+  justify-content: end;
+  text-align: center;
+  margin-top: 30px;
 }
 
-.cta-about-club-button{
-    background: linear-gradient(#9F040D, #690208);
-    text-transform: uppercase;
+.cta-about-club-button {
+  background: linear-gradient(#9F040D, #690208);
+  text-transform: uppercase;
 }
 
 
@@ -310,33 +312,33 @@ body {
 
 /* Адаптивность */
 @media (max-width: 992px) {
-    .about-club-content {
-        flex-direction: column;
-        gap: 30px;
-    }
+  .about-club-content {
+    flex-direction: column;
+    gap: 30px;
+  }
 
-    .about-club-image,
-    .about-club-text-and-image {
-        flex: 0 0 100%;
-    }
+  .about-club-image,
+  .about-club-text-and-image {
+    flex: 0 0 100%;
+  }
 }
 
 @media (max-width: 576px) {
-    .about-club {
-        padding: 60px 20px;
-    }
+  .about-club {
+    padding: 60px 20px;
+  }
 
-    .about-club-text-and-image {
-        padding: 15px;
-    }
+  .about-club-text-and-image {
+    padding: 15px;
+  }
 
-    .about-club-text-and-image h2 {
-        font-size: 28px;
-    }
+  .about-club-text-and-image h2 {
+    font-size: 28px;
+  }
 
-    .about-club-group-image {
-        margin-top: 15px;
-    }
+  .about-club-group-image {
+    margin-top: 15px;
+  }
 }
 
 
@@ -349,229 +351,231 @@ body {
 /* --------------------------- Наши направления --------------------------- */
 
 .directions {
-    background: linear-gradient(135deg, #500, #200);
-    padding: 80px var(--padding-page);
-    margin: 80px 0 0 0px;
-    box-shadow: #000;
-    box-shadow: inset 0 70px 40px -30px rgba(0, 0, 0, 0.6), 
+  background: linear-gradient(135deg, #500, #200);
+  padding: 80px var(--padding-page);
+  margin: 80px 0 0 0px;
+  box-shadow: #000;
+  box-shadow: inset 0 70px 40px -30px rgba(0, 0, 0, 0.6),
     inset 0 -70px 40px -30px rgba(0, 0, 0, 0.6);
-  }
-  
-  .section-title {
-    font-size: var(--font-size-h2);
-    text-align: center;
-    margin-bottom: 40px;
-    letter-spacing: 1px;
-    color: white;
-    position: relative;
-    font-family: 'Roboto-Condensed';
-  }
-  
-  
-
-  /* -------------------------- Карточки направлений start -------------------------- */
-
-
-  .directions-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  
-  .card {
-    background: #000;
-    border-radius: 15px;
-    overflow: hidden; 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%; 
-    padding: 12px;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-  }
-  
-  .card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 6px;
-    transition: transform 0.4s ease;
-  }
-  
-  .card:hover img {
-    transform: scale(1.03);
-  }
-  
-  .card-content {
-    padding: 15px;
-    text-align: center;
-  }
-  
-  .card-content h3 {
-    font-weight: 400;
-    font-family: 'Oswald';
-    color: white;
-    font-size: 18px;
-    margin: 0;
-    letter-spacing: 1.5px;
-  }
-  /* -------------------------- Карточки направлений end -------------------------- */
-  
-
-
-
-
-
-
-  /* --------------------------- Наши филиалы --------------------------- */
-  
-.branch-container{
-    padding-top: var(--padding-beteen-sections);
 }
 
+.section-title {
+  font-size: var(--font-size-h2);
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  color: white;
+  position: relative;
+  font-family: 'Roboto-Condensed';
+}
+
+
+
+/* -------------------------- Карточки направлений start -------------------------- */
+
+
+.directions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #000;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  padding: 12px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.03);
+}
+
+.card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-content h3 {
+  font-weight: 400;
+  font-family: 'Oswald';
+  color: white;
+  font-size: 18px;
+  margin: 0;
+  letter-spacing: 1.5px;
+}
+
+/* -------------------------- Карточки направлений end -------------------------- */
+
+
+
+
+
+
+
+/* --------------------------- Наши филиалы --------------------------- */
+
+.branch-container {
+  padding-top: var(--padding-beteen-sections);
+}
+
+.branches-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 96px;
+  position: relative;
+}
+
+.branch-card {
+  background: rgba(0, 0, 0);
+  border-radius: 28px;
+  padding: 25px;
+  /* backdrop-filter: blur(10px); */
+  /* box-shadow: 0 5px 20px rgba(0,0,0,0.5); */
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.branch-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.branch-card h3 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #A1A1A1;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: 'Oswald';
+}
+
+.branch-info {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: space-evenly;
+}
+
+.branch-info-icon {
+  height: 36px;
+  width: auto;
+}
+
+.info-item {
+  display: flex;
+
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 10px;
+  color: #A1A1A1;
+  font-size: 16px;
+  font-family: 'Montserrat';
+}
+
+.info-item .column {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cta-btn-branches {
+  background: linear-gradient(#9F040D, #690208);
+  text-transform: uppercase;
+}
+
+
+.gloves-icon {
+  width: 150px;
+  position: absolute;
+  top: 220px;
+  right: 00px;
+  height: auto;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+}
+
+.gloves-icon-black {
+  width: 150px;
+  position: absolute;
+  top: 120px;
+  right: 00px;
+  height: auto;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+}
+
+
+
+.cta-view-the-halls-button {
+  background: black;
+
+
+}
+
+
+
+
+
+/* Адаптивность */
+@media (max-width: 992px) {
+  .directions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .directions {
+    padding: 60px 20px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .directions-grid {
+    grid-template-columns: 1fr;
+  }
+
   .branches-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 96px;
-    position: relative;
+    grid-template-columns: 1fr;
   }
-  
+
   .branch-card {
-    background: rgba(0, 0, 0);
-    border-radius: 28px;
-    padding: 25px;
-    /* backdrop-filter: blur(10px); */
-    /* box-shadow: 0 5px 20px rgba(0,0,0,0.5); */
-    transition: transform 0.3s ease;
-    position: relative;
+    padding: 20px;
   }
-  
-  .branch-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-  }
-  
-  .branch-card h3 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #A1A1A1;
-    text-align: center;
-    letter-spacing: 2px;
-    font-family: 'Oswald';
-  }
-  
-  .branch-info {
-    margin-bottom: 50px;
-    display: flex;
+
+  .branch-footer {
     flex-direction: column;
-    gap: 30px;
-    justify-content: space-evenly;
-  }
-  .branch-info-icon{
-    height: 36px;
-    width: auto;
-  }
-  
-  .info-item {
-    display: flex;
-    
-    align-items: center;
-    gap: 25px;
-    margin-bottom: 10px;
-    color: #A1A1A1;
-    font-size: 16px;
-    font-family: 'Montserrat';
+    gap: 15px;
   }
 
-  .info-item .column{
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  .gloves-icon {
+    width: 40px;
   }
-
-  .cta-btn-branches{
-        background: linear-gradient(#9F040D, #690208);
-        text-transform: uppercase;
-  }
-  
-  
-  .gloves-icon{
-    width: 150px;
-    position: absolute;
-    top: 220px;
-    right: 00px;
-    height: auto;
-    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
-  }
-  
-  .gloves-icon-black{
-    width: 150px;
-    position: absolute;
-    top: 120px;
-    right: 00px;
-    height: auto;
-    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
-  }
-
-
-
-  .cta-view-the-halls-button{
-    background: black;
-    
-    
-  }
-  
-
-  
-
-  
-  /* Адаптивность */
-  @media (max-width: 992px) {
-    .directions-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .directions {
-      padding: 60px 20px;
-    }
-  
-    .section-title {
-      font-size: 28px;
-    }
-  
-    .directions-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .branches-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .branch-card {
-      padding: 20px;
-    }
-  
-    .branch-footer {
-      flex-direction: column;
-      gap: 15px;
-    }
-  
-    .gloves-icon {
-      width: 40px;
-    }
-  }
+}
 
 
 
 
 
 
-  /* --------------------- Соревнования в которых мы участвовали ------------------------ */
+/* --------------------- Соревнования в которых мы участвовали ------------------------ */
 
 
 .competitions {
@@ -596,6 +600,7 @@ body {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -625,7 +630,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
   color: white;
   padding: 15px;
   font-size: 16px;
@@ -636,7 +641,7 @@ body {
 }
 
 .slide:hover .slide-caption {
-  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
 }
 
 
@@ -665,7 +670,7 @@ body {
 
 @media (max-width: 576px) {
   .slider-track {
-    animation-duration: 15s; 
+    animation-duration: 15s;
   }
 
   .slide {
@@ -691,22 +696,22 @@ body {
   flex-direction: row;
   gap: 20px;
   /* justify-content: space-between; */
-  
+
 }
 
 .why-card {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   gap: 20px;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
 }
 
 .why-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
 .why-card img {
@@ -730,7 +735,7 @@ body {
   border-radius: 12px;
 }
 
-.card-text h3{
+.card-text h3 {
   color: white;
   font-size: 24px;
   font-family: 'Roboto-Condensed';
@@ -771,18 +776,18 @@ body {
 /* ---------------------------- Летний лагерь и сдача на берет --------------------------- */
 
 
-.summer-camp{
+.summer-camp {
   background: linear-gradient(135deg, #470105 0%, #690208 100%);
   padding: var(--padding-beteen-sections) 0;
 }
 
-.summer-camp-content{
+.summer-camp-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.summer-camp-flex{
+.summer-camp-flex {
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -790,29 +795,29 @@ body {
 
 }
 
-.summer-camp-card{
+.summer-camp-card {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.summer-camp-card img{
+.summer-camp-card img {
   width: 100%;
   height: 300px;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 4px 4px 14px 1px #0000009c;
-  
+
 }
 
-.summer-camp-card > :nth-child(2){
+.summer-camp-card> :nth-child(2) {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-.summer-camp-card h3{
+.summer-camp-card h3 {
   color: white;
   font-size: 22px;
   font-family: 'Roboto-Condensed';
@@ -820,3 +825,225 @@ body {
   /* text-transform: uppercase;/ */
   font-weight: 100;
 }
+
+
+
+
+
+
+
+/* --------------------- Отзывы и часто задаваемые вопросы ----------------------- */
+
+
+.reviews {
+  background: #111111;
+  padding: var(--padding-beteen-sections) 0;
+}
+
+.reviews-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.reviews-content-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.next-btn {
+  background: none;
+  border: none;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  border: #fff 1px solid;
+  border-radius: 15px;
+  max-width: 350px;
+  padding: 30px;
+  gap: 20px;
+
+  -webkit-box-shadow: 0px 0px 83px 4px rgba(123, 0, 2, 0.41);
+  -moz-box-shadow: 0px 0px 83px 4px rgba(123, 0, 2, 0.41);
+  box-shadow: 0px 0px 83px 4px rgba(123, 0, 2, 0.41);
+
+
+}
+
+.review-card> :nth-child(1) h3 {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.review-card> :nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.review-card> :nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.review-card> :nth-child(2) img {
+  width: 30px;
+  height: auto;
+}
+
+.review-card>:nth-child(3) p {
+  color: white;
+  font-family: 'Montserrat';
+  font-weight: 100;
+  text-align: start;
+  font-size: 14px;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+}
+
+
+
+/* --------------- Часто задаваемы вопросы -------------------- */
+
+.faq-section{
+  background: #111111;
+  padding: var(--padding-beteen-sections) 0;
+}
+
+.faq-question {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 30px 10px 10px;
+  font-size: 18px;
+  font-weight: 500;
+  border-bottom: 1px solid #a6a6a67d;
+  line-height: 30px;
+  font-family: 'Montserrat';
+}
+
+.faq-question:hover,
+.faq-question:hover::after {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.faq-question.active {
+  border-bottom: 1px solid;
+  font-weight: bold;
+}
+
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  right: 1rem;
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+.faq-question.active::after {
+  content: '-';
+}
+
+.faq-answer {
+  opacity: 0;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease 0.15s;
+}
+
+.faq-answer p{
+  font-family: 'Montserrat';
+  font-weight: 100;
+  font-size: 16px;
+}
+
+.faq-answer.active {
+  opacity: 1;
+  padding: 20px;
+  max-height: 100%;
+  transition: all 0.35s ease 0.15s;
+}
+
+
+
+
+
+/* -------------------------------- Контакты ------------------------------------ */
+
+.contacts{
+  background: #620208;
+  padding: var(--padding-beteen-sections) 0;
+}
+
+.contacts-content{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.contacts-three-blocks{
+  display: flex;
+  flex-direction: row;
+  font-family: 'Oswald';
+  gap: 50px;
+}
+
+.contacts-card{
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  padding: 30px;
+  border-radius: 12px;
+  justify-content: center;
+}
+
+.contacts-icons{
+  width: 50px;
+  height: auto;
+}
+
+
+.contacts-phones{
+  flex: 1;
+}
+
+
+.contacts-adresses{
+  flex: 2;
+}
+
+
+.contacts-messengers{
+  flex: 1;
+}
+
+.contacts-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.contacts-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+
