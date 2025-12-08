@@ -293,7 +293,7 @@ body {
     transform: scale(1.03);
 }
 
-.about-club-button {
+.about-club-button, .view-the-halls-button {
     display: flex;
     justify-content: end;
     text-align: center;
@@ -446,6 +446,7 @@ body {
     /* backdrop-filter: blur(10px); */
     /* box-shadow: 0 5px 20px rgba(0,0,0,0.5); */
     transition: transform 0.3s ease;
+    position: relative;
   }
   
   .branch-card:hover {
@@ -476,6 +477,7 @@ body {
   
   .info-item {
     display: flex;
+    
     align-items: center;
     gap: 25px;
     margin-bottom: 10px;
@@ -496,13 +498,30 @@ body {
   }
   
   
-  .gloves-icon {
-    width: 120px;
+  .gloves-icon{
+    width: 150px;
     position: absolute;
-    top: 50px;
-    right: 80px;
+    top: 220px;
+    right: 00px;
     height: auto;
-    filter: drop-shadow(0 0 3px rgba(255,255,255,0.3));
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+  }
+  
+  .gloves-icon-black{
+    width: 150px;
+    position: absolute;
+    top: 120px;
+    right: 00px;
+    height: auto;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+  }
+
+
+
+  .cta-view-the-halls-button{
+    background: black;
+    
+    
   }
   
 
@@ -546,3 +565,258 @@ body {
       width: 40px;
     }
   }
+
+
+
+
+
+
+  /* --------------------- Соревнования в которых мы участвовали ------------------------ */
+
+
+.competitions {
+  background: #000;
+  padding: var(--padding-beteen-sections) 0;
+  position: relative;
+}
+
+.competitions-slider {
+  overflow: hidden;
+  position: relative;
+  margin-top: 30px;
+}
+
+.slider-track {
+  display: flex;
+  animation: slideLeft 20s linear infinite;
+  gap: 20px;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.slide {
+  min-width: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 2px rgb(0, 0, 0) inset;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.slide:hover img {
+  transform: scale(1.05);
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  transition: background 0.3s;
+  font-family: 'Montserrat';
+}
+
+.slide:hover .slide-caption {
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+
+
+@media (max-width: 768px) {
+  .competitions {
+    padding: 60px 20px;
+  }
+
+  .slider-track {
+    gap: 15px;
+  }
+
+  .slide {
+    min-width: 250px;
+  }
+
+  .slide img {
+    height: 150px;
+  }
+
+  .slide-caption {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .slider-track {
+    animation-duration: 15s; 
+  }
+
+  .slide {
+    min-width: 200px;
+  }
+}
+
+
+
+
+/* --------------------- Почему выбирают нас ---------------------- */
+
+
+/* === Секция "Почему выбирают нас" === */
+
+.why-us {
+  background: #000;
+  padding: var(--padding-beteen-sections) 0;
+}
+
+.why-us-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  /* justify-content: space-between; */
+  
+}
+
+.why-card {
+  display: flex;
+  flex-direction: column;  
+  gap: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.why-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+
+.card-text {
+  text-align: center;
+  align-content: center;
+  /* padding: 20px; */
+  height: 140px;
+  width: auto;
+  background: #5C0106;
+  backdrop-filter: blur(5px);
+  transition: background 0.3s;
+  border-radius: 12px;
+}
+
+.card-text h3{
+  color: white;
+  font-size: 24px;
+  font-family: 'Roboto-Condensed';
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+/* Адаптивность */
+@media (max-width: 992px) {
+  .why-us-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .why-us {
+    padding: 60px 20px;
+  }
+
+  .why-us-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-card img {
+    height: 150px;
+  }
+
+  .card-text {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+
+
+
+/* ---------------------------- Летний лагерь и сдача на берет --------------------------- */
+
+
+.summer-camp{
+  background: linear-gradient(135deg, #470105 0%, #690208 100%);
+  padding: var(--padding-beteen-sections) 0;
+}
+
+.summer-camp-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.summer-camp-flex{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+
+}
+
+.summer-camp-card{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summer-camp-card img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 4px 4px 14px 1px #0000009c;
+  
+}
+
+.summer-camp-card > :nth-child(2){
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.summer-camp-card h3{
+  color: white;
+  font-size: 22px;
+  font-family: 'Roboto-Condensed';
+  letter-spacing: 1px;
+  /* text-transform: uppercase;/ */
+  font-weight: 100;
+}
