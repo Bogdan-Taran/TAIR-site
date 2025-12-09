@@ -331,7 +331,7 @@
       </div>
 
       <div class="view-the-halls-button">
-        <button class="button-base cta-view-the-halls-button">Посмотреть больше</button>
+        <button class="button-base cta-view-the-halls-button" onclick="goToPageSummerCampBeret()">Посмотреть больше</button>
       </div>
     </div>
   </section>
@@ -622,7 +622,7 @@
 </html>
 
 
-<!-- для faq -->
+<!-- для faq и button-->
 <script>
   const items = document.querySelectorAll(".faq-question");
 
@@ -632,4 +632,11 @@
   }
 
   items.forEach(item => item.addEventListener('click', toggleAccordion));
+
+
+  function goToPageSummerCampBeret() {
+
+  window.location.href = "../pages/summer-camp-beret.html"; 
+
+}
 </script>

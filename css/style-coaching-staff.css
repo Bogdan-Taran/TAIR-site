@@ -4,7 +4,7 @@
     --font-size-p: 14px;
     --dark-background-color: #121212;
     --padding-beteen-sections: 60px;
-  }
+}
 
 .logo-text a {
     font-size: 24px;
@@ -71,10 +71,10 @@ h1 {
     background: transparent;
     transform: skewX(-20deg);
     transform-origin: left;
-    
-  }
-  
-  .trainer-yaroslav-image-container::after {
+
+}
+
+.trainer-yaroslav-image-container::after {
     content: '';
     position: absolute;
     top: 0;
@@ -84,8 +84,8 @@ h1 {
     background: #9C1E1E;
     transform: skewX(-20deg);
     transform-origin: right;
-    
-  
+
+
 }
 
 .trainer-yaroslav-text-container h2 {
@@ -108,12 +108,12 @@ h1 {
 /* ---------------- Цитата секция -------------------- */
 
 
-.yaroslav-quote-content{
-    background: url('../src/img/coaching-staff/yaroslav-quote-background.png') no-repeat ;
+.yaroslav-quote-content {
+    background: url('../src/img/coaching-staff/yaroslav-quote-background.png') no-repeat;
     background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
     height: 45vh;
     display: flex;
     flex-direction: column;
@@ -123,13 +123,14 @@ h1 {
     padding: 0 30vw;
 }
 
-.yaroslav-quote-content :first-child p{
+.yaroslav-quote-content :first-child p {
     font-size: 18px;
     text-align: center;
     color: #e2e2e2;
     margin-bottom: 25px;
 }
-.yaroslav-quote-content :last-child p{
+
+.yaroslav-quote-content :last-child p {
     font-size: 14px;
     text-align: center;
     color: #ffffff;
@@ -137,14 +138,14 @@ h1 {
 
 /* ------------------------- Ирина секция ------------------------- */
 
-.trainer-irina-content{
+.trainer-irina-content {
     display: flex;
     flex-direction: row;
     height: 45vh;
 }
 
 
-.trainer-irina-text-container{
+.trainer-irina-text-container {
     background: #9C1E1E;
     display: flex;
     flex-direction: column;
@@ -168,7 +169,7 @@ h1 {
     line-height: 18px;
 }
 
-.trainer-irina-image-container{
+.trainer-irina-image-container {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -181,7 +182,7 @@ h1 {
     bottom: 0;
     left: 15vw;
     height: 55vh;
-    
+
 }
 
 
@@ -196,10 +197,10 @@ h1 {
     background: transparent;
     transform: skewX(-20deg);
     transform-origin: left;
-    
-  }
-  
-  .trainer-irina-text-container::after {
+
+}
+
+.trainer-irina-text-container::after {
     content: '';
     position: absolute;
     top: 0;
@@ -210,24 +211,24 @@ h1 {
     background: #9C1E1E;
     transform: skewX(-20deg);
     transform-origin: right;
-    
-  
+
+
 }
 
 
 
 /* ----------------------- Ирина цитата ---------------------  */
 
-.irina-quote-section{
+.irina-quote-section {
     padding-bottom: var(--padding-beteen-sections);
 }
 
-.irina-quote-content{
-    background: url('../src/img/coaching-staff/irina-quote-background.png') no-repeat ;
+.irina-quote-content {
+    background: url('../src/img/coaching-staff/irina-quote-background.png') no-repeat;
     background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
     height: 45vh;
     display: flex;
     flex-direction: column;
@@ -237,13 +238,14 @@ h1 {
     padding: 0 30vw;
 }
 
-.irina-quote-content :first-child p{
+.irina-quote-content :first-child p {
     font-size: 18px;
     text-align: center;
     color: #e2e2e2;
     margin-bottom: 25px;
 }
-.irina-quote-content :last-child p{
+
+.irina-quote-content :last-child p {
     font-size: 14px;
     text-align: center;
     color: #ffffff;
