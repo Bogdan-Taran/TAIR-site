@@ -1,0 +1,250 @@
+:root {
+    --padding-page: 80px;
+    --font-size-h2: 36px;
+    --font-size-p: 14px;
+    --dark-background-color: #121212;
+    --padding-beteen-sections: 60px;
+  }
+
+.logo-text a {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-family: 'Oswald';
+    text-decoration: none;
+    color: #fff;
+}
+
+h1 {
+    color: #fff;
+    font-size: 36px;
+    font-family: 'Roboto-Condensed';
+    text-align: center;
+    padding: 30px 0;
+}
+
+
+/*  ------------------- Секция тренер Ярослав --------------------- */
+.trainer-yaroslav-section {
+    background: #121212;
+}
+
+.trainer-yaroslav-content {
+    display: flex;
+    flex-direction: row;
+    height: 45vh;
+}
+
+.trainer-yaroslav-image-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: #fff;
+    width: 110vw;
+}
+
+.trainer-yaroslav-image-container img {
+    position: absolute;
+    bottom: 0;
+    right: 10vw;
+    height: 55vh;
+}
+
+
+
+.trainer-yaroslav-text-container {
+    background: #9C1E1E;
+    display: flex;
+    flex-direction: column;
+    padding: 0 120px;
+    justify-content: center;
+    width: 150vw;
+}
+
+.trainer-yaroslav-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background: transparent;
+    transform: skewX(-20deg);
+    transform-origin: left;
+    
+  }
+  
+  .trainer-yaroslav-image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5vw;
+    width: 10vw;
+    height: 100%;
+    background: #9C1E1E;
+    transform: skewX(-20deg);
+    transform-origin: right;
+    
+  
+}
+
+.trainer-yaroslav-text-container h2 {
+    font-family: 'Roboto-Condensed';
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.trainer-yaroslav-text-container p {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    line-height: 18px;
+}
+
+
+
+
+/* ---------------- Цитата секция -------------------- */
+
+
+.yaroslav-quote-content{
+    background: url('../src/img/coaching-staff/yaroslav-quote-background.png') no-repeat ;
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+    padding: 0 30vw;
+}
+
+.yaroslav-quote-content :first-child p{
+    font-size: 18px;
+    text-align: center;
+    color: #e2e2e2;
+    margin-bottom: 25px;
+}
+.yaroslav-quote-content :last-child p{
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* ------------------------- Ирина секция ------------------------- */
+
+.trainer-irina-content{
+    display: flex;
+    flex-direction: row;
+    height: 45vh;
+}
+
+
+.trainer-irina-text-container{
+    background: #9C1E1E;
+    display: flex;
+    flex-direction: column;
+    padding: 0 110px;
+    justify-content: center;
+    position: relative;
+    /* width: 150vw; */
+}
+
+.trainer-irina-text-container h2 {
+    font-family: 'Roboto-Condensed';
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.trainer-irina-text-container p {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    line-height: 18px;
+}
+
+.trainer-irina-image-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: #fff;
+    width: 200vw;
+}
+
+.trainer-irina-image-container img {
+    position: absolute;
+    bottom: 0;
+    left: 15vw;
+    height: 55vh;
+    
+}
+
+
+
+.trainer-irina-text-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background: transparent;
+    transform: skewX(-20deg);
+    transform-origin: left;
+    
+  }
+  
+  .trainer-irina-text-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5vw;
+    z-index: 1;
+    width: 10vw;
+    height: 100%;
+    background: #9C1E1E;
+    transform: skewX(-20deg);
+    transform-origin: right;
+    
+  
+}
+
+
+
+/* ----------------------- Ирина цитата ---------------------  */
+
+.irina-quote-section{
+    padding-bottom: var(--padding-beteen-sections);
+}
+
+.irina-quote-content{
+    background: url('../src/img/coaching-staff/irina-quote-background.png') no-repeat ;
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+    padding: 0 30vw;
+}
+
+.irina-quote-content :first-child p{
+    font-size: 18px;
+    text-align: center;
+    color: #e2e2e2;
+    margin-bottom: 25px;
+}
+.irina-quote-content :last-child p{
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff;
+}
