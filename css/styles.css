@@ -157,7 +157,8 @@ body {
 .hero {
   padding: 0 var(--padding-page);
   height: 150vh;
-  background: url('../src/assets/hero_photo.png') no-repeat;
+  /* background: url('../src/assets/hero_photo.png') no-repeat; */
+  background: url('../src/assets/hero-photo-2.png') no-repeat;
   /* background-size: cover; */
   background-size: 70% auto;
   background-position: top;
@@ -228,6 +229,7 @@ body {
   position: relative;
   max-height: 600px;
   height: 600px;
+  margin-top: -250px;
 }
 
 .about-club-content {
@@ -912,7 +914,7 @@ body {
 
 /* --------------- Часто задаваемы вопросы -------------------- */
 
-.faq-section{
+.faq-section {
   background: #111111;
   padding: var(--padding-beteen-sections) 0;
 }
@@ -964,7 +966,7 @@ body {
   transition: all 0.2s ease 0.15s;
 }
 
-.faq-answer p{
+.faq-answer p {
   font-family: 'Montserrat';
   font-weight: 100;
   font-size: 16px;
@@ -983,67 +985,264 @@ body {
 
 /* -------------------------------- Контакты ------------------------------------ */
 
-.contacts{
+.contacts {
   background: #620208;
   padding: var(--padding-beteen-sections) 0;
 }
 
-.contacts-content{
+.contacts-content {
   display: flex;
   flex-direction: column;
 
 }
 
-.contacts-three-blocks{
+.contacts-three-blocks {
   display: flex;
   flex-direction: row;
   font-family: 'Oswald';
   gap: 50px;
 }
 
-.contacts-card{
+.contacts-three-blocks p {
+  font-size: 20px;
+}
+
+.contacts-card {
   display: flex;
   flex-direction: column;
   background: #000;
   padding: 30px;
   border-radius: 12px;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
-.contacts-icons{
+.contacts-icons {
   width: 50px;
   height: auto;
 }
 
 
-.contacts-phones{
+.contacts-phones {
   flex: 1;
 }
 
-
-.contacts-adresses{
+.contacts-adresses {
   flex: 2;
 }
 
-
-.contacts-messengers{
+.contacts-messengers {
   flex: 1;
 }
 
-.contacts-row{
+
+.contacts-row {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
+  gap: 20px;
 }
 
-.contacts-header{
+.contacts-header {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-size: 22px;
+  font-size: 26px;
   margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
 
+/* ---------------- Карта 2ГИС ------------------------ */
+
+.contacts-map {
+  scroll-margin-top: 90px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+
+
+
+
+/*  ------------------------ Смоетреть больше секция --------------------------------- */
+
+.see-more-section {
+  background: #620208;
+  padding: var(--padding-beteen-sections) 0;
+}
+
+.see-more-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.see-more-content :nth-child(2) {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.see-more-content> :nth-child(2) img {
+  width: 70%;
+  border-radius: 12px;
+}
+
+.see-more-redirection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.see-more-redirection :nth-child(1) h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: start;
+}
+
+.see-more-field {
+  display: flex;
+  flex-direction: row;
+  border: 5px solid black;
+  align-items: center;
+  border-radius: 12px;
+
+
+}
+
+.see-more-field p {
+  font-family: 'Montserrat';
+  padding: 0 50px;
+  font-size: 18px;
+}
+
+
+
+.see-more-icon-container {
+  display: flex;
+}
+
+.see-more-icon-container img {
+  height: 50px;
+}
+
+
+.see-more-field :last-child:hover {
+  cursor: pointer;
+}
+
+.cta-button-see-more-up {
+  padding-top: 50px;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.cta-up-button {
+  background: black;
+}
+
+
+
+
+
+
+/* --------------------------- Футер ------------------------- */
+
+.footer-section {
+  background: #000;
+  padding: var(--padding-beteen-sections);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
+
+hr.vertical {
+  border: 0;
+  margin: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.404);
+  height: 120px;
+  border-radius: 12px;
+  float: left;
+  align-self: center
+}
+
+
+.footer-lists{
+  font-family: 'Montserrat';
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.footer-lists a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+}
+.footer-lists a:hover{
+  color: #cacaca;
+}
+
+
+.footer-lists h3{
+  font-size: 24px;
+  font-weight: 100;
+  padding-bottom: 10px;
+  
+}
+
+.footer-content > div:nth-child(5) h3{
+  align-self: center;
+}
+
+
+.social-media {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 12px;
+  grid-row-gap: 12px;
+}
+
+.social-media-card {
+  background: #F0F0FF;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+
+}
+.social-media-card img{
+  width: 55px;
+  height: auto;
+}
+
+.telegram {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.whatsapp {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.instagram {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.vk {
+  grid-area: 2 / 2 / 3 / 3;
+  background: #000;
+  border: 2px white solid;
+}
