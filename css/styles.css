@@ -1,5 +1,9 @@
+html{
+  font-size: 16px;
+}
+
 :root {
-  --padding-page: 80px;
+  --padding-page: 5rem;
   --font-size-h2: 36px;
   --font-size-p: 14px;
   --dark-background-color: #121212;
@@ -157,7 +161,8 @@ body {
 /* hero section */
 .hero {
   padding: 0 var(--padding-page);
-  height: 150vh;
+  height: 1000px;
+  
   /* background: url('../src/assets/hero_photo.png') no-repeat; */
   background: url('../src/assets/hero-photo-2.png') no-repeat;
   /* background-size: cover; */
@@ -228,8 +233,7 @@ body {
   background-color: var(--dark-background-color);
   padding: 0 var(--padding-beteen-sections);
   position: relative;
-  max-height: 600px;
-  height: 600px;
+  height: auto;
   margin-top: -250px;
 }
 
@@ -239,6 +243,8 @@ body {
   align-items: center;
   align-content: stretch;
   justify-content: space-between;
+  height: auto;
+
 }
 
 .about-club-image {

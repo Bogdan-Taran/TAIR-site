@@ -1,0 +1,249 @@
+html {
+    font-size: 16px;
+}
+
+.about-club-paragraph {
+    font-family: 'Montserrat';
+    max-width: 30vw;
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: #e6e6e6;
+}
+
+.header-section {
+    background-color: #000;
+    margin-bottom: 5rem;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 90vh;
+}
+
+.header-content:first-child {
+    padding-left: 5rem;
+}
+
+.header-content:first-child h1 {
+    text-align: start;
+    font-size: 4rem;
+}
+
+.header-content :nth-child(2) {
+    position: relative;
+    flex: 0 0 60%;
+    overflow: hidden;
+}
+
+.header-content :nth-child(2)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left,
+            rgba(0, 0, 0, 0) 0%,
+            rgb(0, 0, 0) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.header-content img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+
+
+/* --------------- Чем мы занимаемся секция ------------------------ */
+
+
+.what-we-do-section {
+    background-color: #121212;
+    padding: 5rem 0;
+}
+
+.what-we-do-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 10rem;
+}
+
+.what-we-do-content div {
+    justify-content: center;
+}
+
+
+.what-we-do-photos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    flex: 0 0 40%;
+}
+
+.what-we-do-photos::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    width: 100%;
+    height: 100%;
+    background: #b900006b;
+    filter: blur(3.5rem);
+    pointer-events: none;
+    z-index: 1;
+    padding: 1rem;
+}
+
+.what-we-do-photos-row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    z-index: 2;
+
+}
+
+.what-we-do-photos-row img {
+    border-radius: .7rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+
+}
+
+.what-we-do-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+
+}
+
+.what-we-do-text h2 {
+    font-size: 3rem;
+    font-family: 'Roboto-Condensed';
+    font-weight: 100;
+}
+
+
+
+
+/* ------------------------ ТАИР начало ------------------------- */
+
+.tair-beginning-section {
+    background-color: #121212;
+    padding: 5rem 0;
+}
+
+.tair-beginning-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.tair-beginning-photo-and-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.tair-beginning-photo-and-text>div img {
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.tair-beginning-photo-and-text :nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-start;
+    flex: 0 0 60%;
+}
+
+
+.tair-beginning-photo-and-text h2 {
+    font-size: 3rem;
+    font-family: 'Roboto-Condensed';
+    font-weight: 100;
+}
+.tair-beginning-photo-and-text p {
+    max-width: 50vw;
+}
+
+
+.tair-beginning-three-photos {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+    gap: 1rem;
+}
+.tair-beginning-three-photos img{
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+
+/* ------------------- ТАИР сегодня ---------------------- */
+
+.tair-today-section{
+    background-color: #121212;
+    padding: 5rem 0;
+}
+
+.tair-today-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+.tair-today-text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.tair-today-text-container h2{
+    font-size: 3rem;
+    font-family: 'Roboto-Condensed';
+    font-weight: 100;
+    text-align: center;
+}
+.tair-today-text-container p{
+    text-align: center;
+    max-width: 70vw;
+}
+
+
+
+.tair-today-photos-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    max-width: 100vw;
+    overflow: hidden;
+}
+.tair-today-photos-container img{
+    /* flex: 0 0 20%; */
+    border-radius: .7rem;
+    max-width: 90%;
+}
+
+
+
+

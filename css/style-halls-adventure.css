@@ -1,0 +1,103 @@
+html {
+    font-size: 16px;
+}
+
+.section-header {
+    background: #111111;
+}
+
+.header-content-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-title {
+    font-size: 2.5rem;
+    font-family: 'Roboto-Condensed';
+}
+
+.header-content-text:last-child p {
+    font-size: 1.5rem;
+    font-family: 'Montserrat';
+    text-align: center;
+    font-weight: 100;
+    color: #ffffffd5;
+}
+
+
+hr.horizontal-hr {
+    border: 0;
+    margin: 3rem auto; 
+    border-bottom: 2px solid rgba(255, 255, 255, 0.404);
+    width: 30vw;
+    border-radius: 12px;
+    align-self: center;
+    box-shadow: 0px 0px 30px 2px rgba(224, 29, 29, 0.534);  
+}
+
+
+
+
+/* --------------------------- Секция Академгородок ---------------------------- */
+
+.academ-section{
+    background: #111111;
+    height: 900px;
+}
+
+.academ-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.academ-content-text{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    gap: 2rem;
+}
+.academ-content-text h2{
+    font-size: 2rem;
+    font-family: 'Roboto-Condensed';
+    letter-spacing: .1rem;
+}
+.academ-content-text p{
+    font-size: 1.5rem;
+    font-family: 'Montserrat';
+    font-weight: 100;
+    color: #ffffffd5;
+    max-width: 40vw;
+    line-height: 2rem;
+}
+
+/* --------- Фотографии академ ------------ */
+
+
+.academ-content-photo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+}
+
+.academ-content-photo > div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+.academ-content-photo > div:nth-child(2) >div:nth-child(2){
+    margin-left: -1.5rem;
+}
+.photo-img{
+    border-radius: 1rem;
+}
+
+
+
+
+
