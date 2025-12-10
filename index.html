@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ТАИР - Спортивный клуб</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script src="/js/scripts.js"></script>
 </head>
 
 <body>
@@ -17,6 +18,13 @@
         <img src="src\assets\tair_logo.png" alt="Логотип ТАИР">
         <span class="logo-text">ТАИР</span>
       </div>
+
+      <button class="menu-toggle" aria-label="Открыть меню">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+
       <nav class="main-nav">
         <ul>
           <li><a href="pages\сoaching-staff.html">ТРЕНЕРА</a></li>
@@ -607,35 +615,8 @@
     </div>
   </footer>
 
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>
 
 
-<!-- для faq и button-->
-<script>
-  const items = document.querySelectorAll(".faq-question");
-
-  function toggleAccordion() {
-    this.classList.toggle('active');
-    this.nextElementSibling.classList.toggle('active');
-  }
-
-  items.forEach(item => item.addEventListener('click', toggleAccordion));
-
-
-  function goToPageSummerCampBeret() {
-
-  window.location.href = "../pages/summer-camp-beret.html"; 
-
-}
-</script>
