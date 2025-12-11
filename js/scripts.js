@@ -40,3 +40,40 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+
+
+  // листание отзывов
+  document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.reviews-track');
+    const cards = document.querySelectorAll('.review-card');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    
+    let currentIndex = 0;
+    const cardCount = cards.length;
+    
+    function updateSlider() {
+      const offset = -currentIndex * (cards[0].offsetWidth + 20); // 20px - gap
+      track.style.transform = `translateX(${offset}px)`;
+    }
+    
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % cardCount;
+      updateSlider();
+    }
+    
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + cardCount) % cardCount;
+      updateSlider();
+    }
+    
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+    
+    // Автоматическая прокрутка каждые 5 секунд
+    // setInterval(nextSlide, 5000);
+    
+    // Обновление при изменении размера окна
+    window.addEventListener('resize', updateSlider);
+  });
