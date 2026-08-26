@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ТАИР - Спортивный клуб</title>
+  <script src="js/scripts.js" defer></script>
+  <script src="js/import-footer-header.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/modal/style-contact-us.css">
+</head>
+
+<body>
+
+
+
+  <div id="header-container"></div>
+
+
+  <section class="hero">
+    <div class="hero-content">
+      <!-- <img src="src/assets/hero_photo.png" alt="Фото главной страницы"> -->
+      <p class="hero-subtitle">СПОРТИВНЫЙ КЛУБ</p>
+      <button class="button-base cta-button js-open-modal">ЗАПИСАТЬСЯ</button>
+    </div>
+  </section>
+
+
+
+  <section class="about-club" id="about-club">
+    <div class=" about-club-content">
+      <div class="about-club-image">
+        <img src="src/img/about-club-image.png" alt="Боец ТАИР в клетке на ММА">
+      </div>
+
+      <div class="about-club-text-and-image">
+        <h2>О клубе ТАИР</h2>
+        <p>Спортивный клуб ТАИР — здесь каждый тренируется как чемпион и результаты говорят сами за себя! Мы предлагаем
+          тренировки для всех возрастов, пола и уровня подготовки</p>
+
+        <div class="about-club-group-image">
+          <img src="src/img/about-club-image1.png" alt="Группа бойцов ТАИР">
+        </div>
+      </div>
+    </div>
+    <div class="about-club-button ">
+      <button class="button-base cta-button cta-about-club-button" onclick="goToPageAboutClub()">Узнать больше</button>
+    </div>
+  </section>
+
+
+
+  <!-- Секция "Наши направления" -->
+  <section class="directions" id="directions">
+    <div class="container container-directions">
+      <h2 class="section-title">Наши направления</h2>
+      <div class="directions-grid">
+
+        <div class="card">
+          <img src="src/img/directions/mma.jpg" alt="ММА">
+          <div class="card-content">
+            <h3>ММА</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="src/img/directions/health_pe.png" alt="Лечебная физкультура">
+          <div class="card-content">
+            <h3>Лечебная физкультура</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="src/img/directions/arb.jpg" alt="Армейский рукопашный бой">
+          <div class="card-content">
+            <h3>Армейский рукопашный бой</h3>
+          </div>
+        </div>
+
+
+        <div class="card">
+          <img src="src/img/directions/ofp_pe.png" alt="Общефиз подготовка">
+          <div class="card-content">
+            <h3>Общефиз подготовка</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="src/img/directions/adaptive_pe.png" alt="Адаптивная физкультура">
+          <div class="card-content">
+            <h3>Адаптивная физкультура</h3>
+          </div>
+        </div>
+
+
+        <div class="card">
+          <img src="src/img/directions/pankration.jpg" alt="Панкратион">
+          <div class="card-content">
+            <h3>Панкратион</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="src/img/directions/universal_boy.jpg" alt="Универсальный бой">
+          <div class="card-content">
+            <h3>Универсальный бой</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="src/img/directions/summer_camp.jpg" alt="Летний лагерь">
+          <div class="card-content">
+            <h3>Летний лагерь</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="src/img/directions/competitions.png" alt="Соревнования">
+          <div class="card-content">
+            <h3>Соревнования</h3>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- наши филиалы -->
+    <div class="container branch-container" id="branch-container">
+      <h2 class="section-title">Наши филиалы</h2>
+      <div class="branches-grid">
+        <!-- филиал 1 -->
+        <div class="branch-card">
+          <h3>АКАДЕМГОРОДОК</h3>
+          <div class="branch-info">
+            <div class="info-item">
+              <img src="src/assets/point-icon.png" alt="метка" class="branch-info-icon">
+              <span>Проспект Академический, 17</span>
+            </div>
+            <div class="info-item">
+              <img src="src/assets/coach-icon.png" alt="тренер" class="branch-info-icon">
+              <div class="column">
+                <span>Ярослав Таран</span>
+                <span>Некрасова Ирина</span>
+                <span>Максим Кашников</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <img src="src/assets/phone-icon.png" alt="телефон" class="branch-info-icon">
+              <div class="column">
+                <span>+7 952 889 45 15</span>
+                <span>+7 913 800 53 68</span>
+              </div>
+            </div>
+          </div>
+
+          <img src="src/img/branchs/red-box-gloves.png" alt="Перчатки" class="gloves-icon-red">
+        </div>
+
+        <!-- филиал 2 -->
+        <div class="branch-card">
+          <h3>ШКОЛА №53</h3>
+          <div class="branch-info">
+            <div class="info-item">
+              <img src="src/assets/point-icon.png" alt="метка" class="branch-info-icon">
+              <span>Ул. Бела-Куна, 1</span>
+            </div>
+            <div class="info-item">
+              <img src="src/assets/coach-icon.png" alt="тренер" class="branch-info-icon">
+              <div class="column">
+                <span>Ярослав Таран</span>
+                <span>Максим Кашников</span>
+                <span>Савелий Бусыгин</span>
+              </div>
+
+            </div>
+            <div class="info-item">
+              <img src="src/assets/phone-icon.png" alt="телефон" class="branch-info-icon">
+              <span>+7 952 889 45 15</span>
+            </div>
+          </div>
+          <img src="src/img/branchs/black-box-gloves.png" alt="Перчатки" class="gloves-icon-black">
+
+        </div>
+      </div>
+      <div class="view-the-halls-button">
+        <button class="button-base cta-button cta-view-the-halls-button" onclick="goToPageHallsAdventure()">Посмотреть залы</button>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- секция Соревнования -->
+  <section class="competitions" id="competitions">
+    <div class="container container-competitions">
+      <h2 class="section-title">Соревнования в которых мы участвовали</h2>
+      <div class="competitions-slider">
+
+        <div class="slider-track">
+
+          <div class="slide">
+            <img src="src/img/competitions/comp-1.png" alt="Кубок памяти бойцам 1454 МСП">
+            <div class="slide-caption">Кубок памяти бойцам 1454 МСП</div>
+          </div>
+
+
+          <div class="slide">
+            <img src="src/img/competitions/comp-2.png" alt="Кубок Томской области по панкратиону">
+            <div class="slide-caption">Кубок Томской области по панкратиону</div>
+          </div>
+
+
+          <div class="slide">
+            <img src="src/img/competitions/comp-3.png" alt="Совместные спарринги с клубом Матадор">
+            <div class="slide-caption">Совместные спарринги с клубом Матадор</div>
+          </div>
+
+
+          <div class="slide">
+            <img src="src/img/competitions/comp-4.png" alt="ЧиП ММА Томской области">
+            <div class="slide-caption">ЧиП ММА Томской области</div>
+          </div>
+
+
+          <div class="slide">
+            <img src="src/img/competitions/comp-5.png"
+              alt="Традиционный фестиваль Кубок Победы по Армейсому Рукопашному бою среди спортивных клубов городов Сибири">
+            <div class="slide-caption">Традиционный фестиваль Кубок Победы по Армейсому Рукопашному бою среди спортивных
+              клубов городов Сибири</div>
+          </div>
+
+
+          <div class="slide">
+            <img src="src/img/competitions/comp-1.png" alt="Кубок памяти бойцам 1454 МСП">
+            <div class="slide-caption">Кубок памяти бойцам 1454 МСП</div>
+          </div>
+
+
+          <div class="slide">
+            <img src="src/img/competitions/comp-2.png" alt="Кубок Томской области по панкратиону">
+            <div class="slide-caption">Кубок Томской области по панкратиону</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- секция Почему выбирают нас -->
+  <section class="why-us" id="why-us">
+    <div class="container container-why-us">
+      <h2 class="section-title">Почему выбирают нас</h2>
+      <div class="why-us-flex">
+
+        <div class="why-card">
+          <div class="card-text">
+            <h3>УДОБНЫЕ ЗАЛЫ</h3>
+          </div>
+          <div><img src="src/img/why-us/comfort-halls.png" alt="Удобные залы"></div>
+        </div>
+
+
+        <div class="why-card">
+          <div><img src="src/img/why-us/high-quality-to-training.jpg" alt="Качественно относимся к тренерскому делу"></div>
+          <div class="card-text">
+            <h3>КАЧЕСТВЕННОЕ<br>ОТНОШЕНИЕ<br>К ТРЕНЕРСТВУ</h3>
+          </div>
+        </div>
+
+
+        <div class="why-card">
+          <div class="card-text top">
+            <h3>ЭКИПИРОВКА ВЫДАЁТСЯ</h3>
+          </div>
+          <div><img src="src/img/why-us/gear.png" alt="Экипировка выдаётся"></div>
+        </div>
+
+
+        <div class="why-card">
+          <div><img src="src/img/why-us/friendly-staff.png" alt="Дружный коллектив"></div>
+          <div class="card-text bottom">
+            <h3>ДРУЖНЫЙ КОЛЛЕКТИВ</h3>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Секция Летний лагерь и сдача на берет -->
+  <section class="summer-camp" id="summer-camp">
+    <div class="container container-summer-camp">
+      <h2 class="section-title">Летний лагерь и сдача на берет</h2>
+      <div class="summer-camp-content">
+        <div class="summer-camp-flex">
+          <div class="summer-camp-card">
+            <div><img src="src/img/summer-camp/trainings.png" alt="Тренировки"></div>
+            <div>
+              <h3>Тренировки</h3>
+            </div>
+          </div>
+        </div>
+        <div class="summer-camp-flex">
+          <div class="summer-camp-card">
+            <div><img src="src/img/summer-camp/parties.png" alt="Развлечения"></div>
+            <div>
+              <h3>Развлечения</h3>
+            </div>
+          </div>
+        </div>
+        <div class="summer-camp-flex">
+          <div class="summer-camp-card">
+            <div><img src="src/img/summer-camp/berret.png" alt="Сдача на берет"></div>
+            <div>
+              <h3>Сдача на берет</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-cta-button-summer-camp">
+        <button class="button-base cta-button-summer-camp" onclick="goToPageSummerCampBeret()">Посмотреть
+          больше</button>
+      </div>
+    </div>
+  </section>
+
+
+
+  
+  <section class="reviews" id="reviews">
+    <div class="container container-reviews">
+      <h2 class="section-title">Отзывы</h2>
+      <div class="reviews-content">
+        <div>
+          <button type="button" class="nav-btn prev-btn">
+            <img src="src/assets/left-btn.png" alt="Предыдущий отзыв" width="40" height="40">
+          </button>
+        </div>
+        <div class="reviews-slider">
+
+
+          <div class="reviews-track">
+            <div class="review-card">
+              <h3>Дмитрий</h3>
+              <div class="stars">
+                <img src="src/assets/star-yellow.png" alt="Звёздочка">
+                <img src="src/assets/star-yellow.png" alt="Звёздочка">
+                <img src="src/assets/star-yellow.png" alt="Звёздочка">
+                <img src="src/assets/star-yellow.png" alt="Звёздочка">
+                <img src="src/assets/star-yellow.png" alt="Звёздочка">
+              </div>
+              <p>Зал хороший, добротный. Персонал приветливый и отзывчивый. А самое главное - детский тренер по
+                рукопашному бою Ярослав - просто супер-тренер. Дети от его тренировок в восторге. Даже когда приходят с
+                тренировки вымотанные и выжатые как лимон, всё равно довольны.</p>
+            </div>
+
+            <div class="review-card">
+              <h3>Аннастасия</h3>
+              <div class="stars">
+                <img src="src/assets/star-yellow.png" alt="Звёздочка">
+                <img src="src/assets/star-yellow.png" alt="Звёздочка">
+                <img src="src/assets/star-yellow.png" alt="Звёздочка">
+                <img src="src/assets/star-yellow.png" alt="Звёздочка">
+                <img src="src/assets/star-yellow.png" alt="Звёздочка">
+              </div>
+              <p>Читающим, здравствуйте! Нужно поделиться, чтоб знали! Клуб обалденный, без преувеличений! Сын ходит к
+                Ярославу 2-ой год, результаты все отражаются в его медалях и спортивных разрядах. Уже и я подключилась,
+                хожу на адаптивную гимнастику к Ирине Валерьевне. Очень рекомендую, лучшие тренера! Так держать!</p>
+            </div>
+
+            <div class="review-card">
+              <h3>Александр</h3>
+              <div class="stars">
+                <img src="src/assets/star-yellow.png" alt="Звёздочка">
+                <img src="src/assets/star-yellow.png" alt="Звёздочка">
+                <img src="src/assets/star-yellow.png" alt="Звёздочка">
+                <img src="src/assets/star-yellow.png" alt="Звёздочка">
+                <img src="src/assets/star-yellow.png" alt="Звёздочка">
+              </div>
+              <p>Много народа, хорошее снаряжение, классная система тренировок. Готовят ко многим соревнованиям таким
+                как:
+                ММА, рукопашный бой, армейский рукопашный бой. В общем всё круто</p>
+            </div>
+          </div>
+
+
+        </div>
+        <div>
+          <button type="button" class="nav-btn next-btn">
+            <img src="src/assets/right-btn.png" alt="Следующий отзыв" width="40" height="40">
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- --------------- Часто задаваемые восросы ------------------  -->
+  <section class="faq-section" id="faq-section">
+    <div class="container faq-container">
+      <h2 class="section-title">Часто задаваемы вопросы</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <a class="faq-question">Где будут проходить занятия?</a>
+          <div class="faq-answer">
+            <p>Занятия проходят в спортивных залах по адресу Пр. Академический, 17 или ул. Бела-Куна, 1. Залы оснащены
+              всем необходимым оборудованием и мягким покрытием для оттачивания бросков и ударов </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <a class="faq-question">Как проходит занятие?</a>
+          <div class="faq-answer">
+            <p>Динамично и с пользой! Разминка, затем основная часть и игры. Всё под контролем тренера</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <a class="faq-question">Со скольких лет можно посещать тренировки?</a>
+          <div class="faq-answer">
+            <p>С 2 до 90 лет! У нас есть программы для малышей, школьников, взрослых и даже пенсионеров. Главное —
+              желание двигаться и быть здоровым.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <a class="faq-question">Что надеть на занятие и что нужно взять с собой?</a>
+          <div class="faq-answer">
+            <p>Одежда: удобная спортивная (штаны/леггинсы/шорты, футболка).
+              Взять: бутылку воды, полотенце. Снаряжение выдаётся тренером</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <a class="faq-question">Есть ли какие-то противопоказания к занятиям?</a>
+          <div class="faq-answer">
+            <p>Если у вас хронические заболевания или травмы — обязательно сначала сообщите тренеру. Мы адаптируем
+              нагрузку под вас. Безопасность — наш приоритет.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <a class="faq-question">Можно ли будет там пофотографироваться?</a>
+          <div class="faq-answer">
+            <p>Конечно! Фото и видео — в рамках разрешений. Сделаем красивые кадры с тренировки — для мотивации и
+              памяти</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <a class="faq-question">Я никогда не занимался единоборствами, у меня получится?</a>
+          <div class="faq-answer">
+            <p>Абсолютно! Большинство наших учеников начинали с нуля. Тренер поможет освоить базу, подскажет, как
+              правильно двигаться — и через пару занятий вы уже будете чувствовать себя уверенно!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ------------ Контакты ---------------- -->
+  <section class="contacts" id="contacts">
+    <div class="container">
+      <h2 class="section-title">Контакты</h2>
+      <div class="contacts-content">
+        <div class="contacts-three-blocks">
+
+          <div class="contacts-phones contacts-card">
+            <div class="contacts-header">
+              <h3>Телефоны</h3>
+            </div>
+            <div class="contacts-row container-phone-call">
+              <img src="src/assets/phone-icon.png" class="contacts-icons" alt="Иконка телефона">
+              <a href="tel:+79138005368" class="contacts-phone-btn">+7-913-800-53-68</a>
+
+            </div>
+            <div class="contacts-row container-phone-call">
+              <img src="src/assets/phone-icon.png" class="contacts-icons" alt="Иконка телефона">
+              <a href="tel:+79528894515" class="contacts-phone-btn">+7-952-889-45-15</a>
+            </div>
+          </div>
+
+          <div class="contacts-adresses contacts-card">
+            <h3 class="contacts-header">Адреса</h3>
+
+            <a class="link-to-2gis " href="https://go.2gis.com/uYSgM">
+            <div class="contacts-row container-contacts-address" onclick="">
+              <div class="container-address">
+              <img src="src/assets/point-icon.png" class="contacts-icons" alt="Иконка метки">
+              <p>Пр. Академический, 17</p>
+              </div>
+            </div>
+            </a>
+
+            <a class="link-to-2gis" href="https://go.2gis.com/l9Eep">
+            <div class="contacts-row container-contacts-address">
+              <div class="container-address">
+              <img src="src/assets/point-icon.png" class="contacts-icons" alt="Иконка метки">
+              <p>ул. Бела-Куна, 1</p>
+              </div>
+            </div>
+            </a>
+          </div>
+
+          <div class="contacts-messengers contacts-card">
+            <div class="contacts-header">
+              <h3>Мессенджеры</h3>
+            </div>
+            <div class="container-contacts">
+              <div class="contacts-row">
+                <a href="https://t.me/+79528894515" target="_blank" class="modal__messenger-link" title="Telegram">
+                  <img src="src/assets/icons/telegram-icon.svg" alt="Telegram" loading="lazy">
+                </a>
+                <a href="https://vk.ru/im?sel=-202237984" target="_blank" class="modal__messenger-link" title="VK">
+                  <img src="src/assets/icons/vk-icon.svg" alt="VK" loading="lazy">
+                </a>
+                <a href="https://web.max.ru/263696113" class="modal__messenger-link" title="Max">
+                  <img src="src/assets/icons/max-icon.svg" alt="Max" loading="lazy">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-cta-button-sign-up">
+          <button class="button-base js-open-modal cta-button-black-sign-up">ЗАПИСАТЬСЯ</button>
+        </div>
+
+        <!-- карта 2гис -->
+        <div class="contacts-map advantage-item_contacts" id="contacts-map">
+          <a class="dg-widget-link"
+            href="http://2gis.ru/tomsk/profiles/70000001079701531,70000001095017377,70000001069058584/center/85.06576538085939,56.49642801304434/zoom/13?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть
+            на карте Томска в 2ГИС</a>
+          <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+          <script
+            charset="utf-8">new DGWidgetLoader({ "width": "100%", "height": 500, "borderColor": "#a3a3a3", "pos": { "lat": 56.49642801304434, "lon": 85.06576538085939, "zoom": 12.2 }, "opt": { "city": "tomsk" }, "org": [{ "id": "70000001079701531" }, { "id": "70000001095017377" }, { "id": "70000001069058584" }] });</script>
+          <noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript.
+            Включите его в настройках вашего браузера.</noscript>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="see-more-section" id="see-more-section">
+    <div class="container">
+      <div class="see-more-content">
+        <div class="see-more-redirection">
+          <div>
+            <h2 class="section-title">Больше активностей смотрите в ВК</h2>
+          </div>
+          <div class="see-more-field" onclick="window.open('https://vk.ru/tairtomsk', '_blank');">
+            <div class="see-more-icon-container">
+              <img src="src/assets/VK-icon-black.png" alt="Иконка ВК">
+            </div>
+            <div>
+              <p>Перейти в ВК</p>
+            </div>
+            <div class="see-more-icon-container vk-transit" ><img src="src/assets/btn-pointer.png" alt="Кнопка перейти"></div>
+          </div>
+        </div>
+        <div>
+          <img src="src/img/see-more/image-club.png" alt="Фото клуба">
+        </div>
+      </div>
+      <div class="container-cta-button-up">
+      <button id="scrollTopBtn" class="button-base cta-up-button" onclick="scrollToTop()">Наверх</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+
+
+  <script src="/js/open-modal.js"></script>
+</body>
+
+</html>

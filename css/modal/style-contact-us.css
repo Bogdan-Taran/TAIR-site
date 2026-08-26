@@ -1,0 +1,202 @@
+/* ===== Overlay ===== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== Modal box ===== */
+.modal {
+    background: #000;
+    border: rgba(255, 255, 255, 0.5) 1px solid;
+    border-radius: 16px;
+    padding: 40px 48px 48px;
+    max-width: 720px;
+    width: 90%;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal {
+    transform: translateY(0);
+}
+
+/* ===== Close button ===== */
+.modal__close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.modal__close:hover {
+    color: #fff;
+}
+
+/* ===== Title ===== */
+.modal__title {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 32px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ===== Section row ===== */
+.modal__row {
+    display: flex;
+    align-items: center;
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px 28px;
+    margin-bottom: 16px;
+    gap: 24px;
+}
+
+.modal__row:last-child {
+    margin-bottom: 0;
+}
+
+.modal__row-label {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    min-width: 180px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ===== Phone buttons ===== */
+.modal__phones {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.modal__phone-btn {
+    background: #b22222;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.modal__phone-btn:hover {
+    background: #d32f2f;
+    transform: scale(1.03);
+}
+
+/* ===== Messenger icons ===== */
+.modal__messengers {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.modal__messenger-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    /*height: 56px;*/
+    border-radius: 50%;
+    /*background: #ccc;*/
+    transition: background 0.2s, transform 0.15s;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.modal__messenger-link:hover {
+    /*background: #fff;*/
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.modal__messenger-link img {
+    /*width: 30px;*/
+    height: 50px;
+    object-fit: contain;
+}
+
+/* ===== Form button row ===== */
+.modal__row--center {
+    justify-content: center;
+    padding: 28px;
+}
+
+.modal__form-btn {
+    background: #b22222;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 40px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.modal__form-btn:hover {
+    background: #d32f2f;
+    transform: scale(1.03);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    .modal {
+        padding: 28px 20px 32px;
+    }
+
+    .modal__title {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .modal__row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 18px 20px;
+    }
+
+    .modal__row-label {
+        min-width: auto;
+        font-size: 18px;
+    }
+
+    .modal__row--center {
+        align-items: center;
+    }
+
+    .modal__phone-btn {
+        font-size: 16px;
+        padding: 10px 18px;
+    }
+}
