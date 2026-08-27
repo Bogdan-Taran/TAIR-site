@@ -1,45 +1,39 @@
 import os
 
 
-def rename_and_generate_js(folder_path, output_js_file="images.txt"):
+def generate_js_review_cards(folder_path, output_js_file="reviews.txt"):
     # Поддерживаемые форматы изображений
     valid_extensions = (".jpg", ".jpeg", ".png", ".gif", ".webp")
 
-    # Получаем список всех файлов и сортируем их
+    # Получаем список файлов и сортируем их
     files = sorted(os.listdir(folder_path))
-
-    # Фильтруем только изображения
     images = [f for f in files if f.lower().endswith(valid_extensions)]
 
-    js_images_list = []
+    js_cards_list = []
 
     print(f"Найдено изображений: {len(images)}")
 
-    # Переименование файлов
+    # Генерируем HTML-блоки для каждого изображения
     for index, filename in enumerate(images, start=1):
-        ext = os.path.splitext(filename)[1].lower()
-        new_name = f"image_{index}{ext}"
+        # Формируем путь, который вы указали: src/img/reviews/
+        img_src = f"src/img/reviews/{filename}"
 
-        old_path = os.path.join(folder_path, filename)
-        new_path = os.path.join(folder_path, new_name)
+        # Создаем строку с HTML-карточкой
+        html_card = f'<div class="review-card"> <img data-lazy="{img_src}" alt="Отзыв {index}"></div>'
+        js_cards_list.append(html_card)
 
-        # Переименовываем физически на диске
-        os.rename(old_path, new_path)
-
-        # Добавляем путь для JS (используйте нужный вам путь, например 'assets/img/')
-        js_images_list.append(f"  '{new_name}'")
-
-    # Формируем итоговую строку для JS
-    js_array = "const reviewImages = [\n" + ",\n".join(js_images_list) + "\n];"
+    # Формируем итоговый JS-массив
+    js_array = (
+        "const reviewImages = [\n" + ",\n".join(js_cards_list) + "\n];"
+    )
 
     # Записываем результат в файл
     with open(output_js_file, "w", encoding="utf-8") as f:
         f.write(js_array)
 
-    print(f"Готово! JS-массив сохранен в файл: {output_js_file}")
+    print(f"Готово! JS-массив с HTML сохранен в файл: {output_js_file}")
 
 
 # Укажите путь к вашей папке с картинками
-# Пример для Windows: r"C:\Users\User\Pictures" или для текущей папки: "."
 folder = "/Users/bogdan/Programming/tair-site/src/img/reviews"
-rename_and_generate_js(folder)
+generate_js_review_cards(folder)

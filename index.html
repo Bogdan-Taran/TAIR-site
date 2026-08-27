@@ -5,11 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ТАИР - Спортивный клуб</title>
-  <script src="js/scripts.js" defer></script>
   <script src="js/import-footer-header.js" defer></script>
-  <script src="js/import-reviews.js" defer></script>
+
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/modal/style-contact-us.css">
+
+<!--  стили reviews -->
+  <link rel="stylesheet" href="css/style-reviews.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 </head>
 
 <body>
@@ -396,8 +400,8 @@
 
 
   <!-- ------------ Контакты ---------------- -->
-  <section class="contacts" id="contacts">
-    <div class="container">
+  <section class="contacts-section" id="contacts">
+    <div class="container container-contacts">
       <h2 class="section-title">Контакты</h2>
       <div class="contacts-content">
         <div class="contacts-three-blocks">
@@ -406,12 +410,12 @@
             <div class="contacts-header">
               <h3>Телефоны</h3>
             </div>
-            <div class="contacts-row container-phone-call">
+            <div class="contacts-row container-phone-call" id="call-btn-1" data-phone="+79138005368">
               <img src="src/assets/phone-icon.png" class="contacts-icons" alt="Иконка телефона">
               <a href="tel:+79138005368" class="contacts-phone-btn">+7-913-800-53-68</a>
 
             </div>
-            <div class="contacts-row container-phone-call">
+            <div class="contacts-row container-phone-call" id="call-btn-2" data-phone="+79528894515">
               <img src="src/assets/phone-icon.png" class="contacts-icons" alt="Иконка телефона">
               <a href="tel:+79528894515" class="contacts-phone-btn">+7-952-889-45-15</a>
             </div>
@@ -481,7 +485,7 @@
 
 
   <section class="see-more-section" id="see-more-section">
-    <div class="container">
+    <div class="container see-more-section-container">
       <div class="see-more-content">
         <div class="see-more-redirection">
           <div>
@@ -511,7 +515,18 @@
 
 
 
+
+
+  <script src="js/scripts.js" defer></script>
   <script src="/js/open-modal.js"></script>
+
+  <!--  reviews-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+
+  <script src="js/import-reviews.js" defer></script>
+
 </body>
 
 </html>

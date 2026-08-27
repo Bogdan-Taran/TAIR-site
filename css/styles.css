@@ -167,6 +167,7 @@ body {
   border: none;
 }
 
+
 .hamburger {
   /*width: 25px;*/
   /*height: 3px;*/
@@ -199,7 +200,7 @@ body {
 }
 .menu-toggle.active span:nth-child(1) {
   top: 18px;
-  width: 0%;
+  width: 0;
   left: 50%;
 }
 .menu-toggle.active span:nth-child(2) {
@@ -210,12 +211,13 @@ body {
 }
 .menu-toggle.active span:nth-child(4) {
   top: 18px;
-  width: 0%;
+  width: 0;
   left: 50%;
 }
 
 .menu-toggle.active {
-  margin-top: 250px;
+  top: 230px;
+  position: fixed;
 }
 
 
@@ -254,6 +256,7 @@ body {
     transform: translateY(-150%);
     transition: transform 0.3s ease-in-out;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
   }
 
   .main-nav.active {
@@ -292,6 +295,10 @@ body {
 
 
 @media (max-width: 480px) {
+  .main-nav{
+    top: 0;
+  }
+
   .logo-text {
     font-size: 20px;
     letter-spacing: 2px;
@@ -317,7 +324,7 @@ body {
 .hero {
   padding: 0 var(--padding-page);
   height: 900px;
-  background: url('../src/assets/hero-photo-2.png') no-repeat;
+  background: url('../src/assets/hero-photo.png') no-repeat;
   background-size: 70% auto;
   background-position: top;
   display: flex;
@@ -1736,13 +1743,19 @@ body {
   /*transition: all 0.35s ease 0.15s;*/
 }
 
+@media (max-width: 480px) {
+  .faq-container{
+    padding: 0 10px;
+  }
+}
+
 
 
 
 
 /* -------------------------------- Контакты ------------------------------------ */
 
-.contacts {
+.contacts-section {
   background: #620208;
   padding: var(--padding-beteen-sections) 0;
 }
@@ -1920,7 +1933,7 @@ body {
 }
 
 @media (max-width: 992px) {
-  .contacts {
+  .contacts-section {
     padding: 60px var(--padding-page);
   }
   
@@ -2021,8 +2034,11 @@ body {
 }
 
 @media (max-width: 480px) {
-  .contacts {
-    padding: 50px 15px;
+  .contacts-section {
+    padding: 50px 10px;
+  }
+  .container-contacts{
+    padding: 0 10px;
   }
   
   .contacts-three-blocks {
@@ -2030,7 +2046,7 @@ body {
   }
   
   .contacts-three-blocks p {
-    font-size: 13px;
+    font-size: 20px;
   }
   
   .contacts-icons {
@@ -2047,6 +2063,7 @@ body {
   
   .contacts-row {
     gap: 12px;
+    justify-content: center;
   }
   
   .contacts-map iframe {
@@ -2310,6 +2327,12 @@ body {
 }
 
 @media (max-width: 480px) {
+  .see-more-section{
+    padding: 60px 10px 60px 10px;
+  }
+  .see-more-section-container{
+    padding: 0 10px;
+  }
   .see-more-redirection {
     gap: 12px;
   }
@@ -2329,6 +2352,9 @@ body {
   
   .see-more-content > :nth-child(2) img {
     border-radius: 8px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 }
 
@@ -2398,7 +2424,7 @@ hr.vertical {
 .footer-lists h3 {
   font-size: 24px;
   font-weight: 400;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 
 }
 
@@ -2567,8 +2593,13 @@ hr.vertical {
 }
 
 @media (max-width: 480px) {
+
+  .footer-section {
+    padding: 40px 40px;
+  }
   .footer-content {
     gap: 20px;
+    align-items: normal;
   }
   
   .footer-lists a {

@@ -5,18 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ТАИР - Летний лагерь и сдача на берет</title>
-    <script src="js/import-footer-header.js" defer></script>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/style-coaching-staff.css">
-    <link rel="stylesheet" href="css/style-summer-camp-berret.css">
-
-
+    <script src="../js/import-footer-header.js" defer></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/style-coaching-staff.css">
+    <link rel="stylesheet" href="../css/style-summer-camp-berret.css">
 </head>
 
 <body>
 
     <div id="header-container"></div>
-
 
 
     <section class="summer-camp-section">
@@ -116,8 +113,8 @@
 
                     <div class="summer-camp-media-navigation">
                         <div class="arrows">
-                            <div class="arrow left-btn"><img src="../src/assets/left-btn.png" alt="Кнопка влево"></div>
-                            <div class="arrow right-btn"><img src="../src/assets/right-btn.png" alt="Кнопка вправо">
+                            <div class="arrow left-btn-media"><img src="../src/assets/left-btn.png" alt="Кнопка влево"></div>
+                            <div class="arrow right-btn-media"><img src="../src/assets/right-btn.png" alt="Кнопка вправо">
                             </div>
                         </div>
                         <div class="dots">
@@ -146,8 +143,8 @@
                 </div>
 
                 <div class="arrows arrows-beret">
-                    <div class="arrow left-btn"><img src="../src/assets/left-btn.png" alt="Кнопка влево"></div>
-                    <div class="arrow right-btn"><img src="../src/assets/right-btn.png" alt="Кнопка вправо">
+                    <div class="arrow left-btn-beret"><img src="../src/assets/left-btn.png" alt="Кнопка влево"></div>
+                    <div class="arrow right-btn-beret"><img src="../src/assets/right-btn.png" alt="Кнопка вправо">
                     </div>
                 </div>
 
@@ -191,51 +188,5 @@
 
 </body>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const photocards = document.querySelector('.summer-camp-photocards');
-        const leftBtn = document.querySelector('.left-btn');
-        const rightBtn = document.querySelector('.right-btn');
-        const dots = document.querySelectorAll('.dot');
-
-        const cardWidth = document.querySelector('.card-beret').offsetWidth + 10; // + gap
-        const visibleCards = 4; // максимум 4 карточки
-        const totalCards = document.querySelectorAll('.card-beret').length;
-        const totalSlides = Math.ceil(totalCards / visibleCards); // 12 / 4 = 3 слайда
-
-        let currentSlide = 0;
-
-        function updateCarousel() {
-            photocards.style.transform = `translateX(-${currentSlide * visibleCards * cardWidth}px)`;
-
-            // Обновляем точки
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentSlide);
-            });
-        }
-
-        rightBtn.addEventListener('click', () => {
-            if (currentSlide < totalSlides - 1) {
-                currentSlide++;
-                updateCarousel();
-            }
-        });
-
-        leftBtn.addEventListener('click', () => {
-            if (currentSlide > 0) {
-                currentSlide--;
-                updateCarousel();
-            }
-        });
-
-        // Клик по точке
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                currentSlide = index;
-                updateCarousel();
-            });
-        });
-    });
-</script>
 
 </html>
