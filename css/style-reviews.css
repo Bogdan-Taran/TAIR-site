@@ -1,0 +1,274 @@
+.reviews {
+    background: #111111;
+    padding: var(--padding-beteen-sections) 0;
+}
+
+.reviews-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.reviews-slider {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.reviews-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
+    min-width: 0;
+}
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    min-width: 350px;
+    max-width: 350px;
+    padding: 30px;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(123, 0, 2, 0.6);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.review-card h3 {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.stars img {
+    width: 24px;
+    height: 24px;
+}
+
+.review-card p {
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.nav-btn:active {
+    transform: scale(0.95);
+}
+
+/* Адаптивность */
+@media (max-width: 1199px) {
+    .review-card {
+        min-width: 320px;
+        max-width: 320px;
+        padding: 25px;
+    }
+
+    .review-card h3 {
+        font-size: 18px;
+    }
+
+    .stars img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .review-card p {
+        font-size: 13px;
+        letter-spacing: 0.3px;
+    }
+}
+
+@media (max-width: 992px) {
+    .reviews {
+        padding: 60px var(--padding-page);
+    }
+
+    .reviews-slider {
+        gap: 15px;
+    }
+
+    .review-card {
+        min-width: 280px;
+        max-width: 280px;
+        padding: 20px;
+    }
+
+    .review-card h3 {
+        font-size: 17px;
+    }
+
+    .stars img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .review-card p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .nav-btn {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reviews-slider {
+        gap: 10px;
+    }
+
+    .review-card {
+        min-width: 250px;
+        max-width: 250px;
+        padding: 18px;
+    }
+
+    .review-card h3 {
+        font-size: 16px;
+    }
+
+    .stars img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .review-card p {
+        font-size: 11px;
+        letter-spacing: 0.2px;
+    }
+}
+
+@media (max-width: 576px) {
+    .reviews-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .reviews-slider {
+        width: 100%;
+        order: 1;
+    }
+
+    .reviews-track {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .review-card {
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+
+
+    .reviews-content > :first-child {
+        order: 2;
+    }
+
+    .reviews-content > :last-child {
+        order: 3;
+    }
+
+    .nav-btn {
+        align-self: center;
+        width: 60px;
+        height: 60px;
+    }
+
+    .review-card h3 {
+        font-size: 18px;
+    }
+
+    .review-card p {
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .reviews {
+        padding: 50px 15px;
+    }
+
+    .review-card {
+        padding: 15px;
+    }
+
+    .review-card h3 {
+        font-size: 16px;
+    }
+
+    .stars img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .review-card p {
+        font-size: 13px;
+    }
+
+    .nav-btn {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 360px) {
+    .review-card h3 {
+        font-size: 15px;
+    }
+
+    .review-card p {
+        font-size: 12px;
+    }
+
+    .stars img {
+        width: 14px;
+        height: 14px;
+    }
+}
