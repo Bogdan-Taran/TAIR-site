@@ -1,3 +1,6 @@
+html {
+    font-size: 16px;
+}
 :root {
     --padding-page: 80px;
     --font-size-h2: 36px;
@@ -17,42 +20,70 @@
 
 h1 {
     color: #fff;
-    font-size: 36px;
+    font-size: 3.5rem;
     font-family: 'Roboto-Condensed';
     text-align: center;
-    padding: 30px 0;
+    padding: 40px 0;
 }
 
+
+.trainer-quote  {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+    padding: 0 30vw;
+}
+
+
+.trainer-quote p {
+    font-size: 18px;
+    text-align: center;
+    color: #e2e2e2;
+    margin-bottom: 25px;
+}
+
+.trainer-quote cite {
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.trainer-image-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: #fff;
+}
+.trainer-image-container img{
+    position: absolute;
+    bottom: 0;
+    height: 55vh;
+}
 
 /*  ------------------- Секция тренер Ярослав --------------------- */
-.trainer-yaroslav-section {
-    background: #121212;
-}
 
-.trainer-yaroslav-content {
+.trainer-content {
     display: flex;
     flex-direction: row;
     height: 45vh;
 }
 
 .trainer-yaroslav-image-container {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background: #fff;
     width: 110vw;
 }
 
 .trainer-yaroslav-image-container img {
-    position: absolute;
-    bottom: 0;
     right: 10vw;
-    height: 55vh;
 }
 
-
-
-.trainer-yaroslav-text-container {
+.trainer-text-container {
     background: #9C1E1E;
     display: flex;
     flex-direction: column;
@@ -84,110 +115,123 @@ h1 {
     background: #9C1E1E;
     transform: skewX(-20deg);
     transform-origin: right;
-
-
 }
 
-.trainer-yaroslav-text-container h2 {
+.trainer-text-container h2 {
     font-family: 'Roboto-Condensed';
-    font-size: 26px;
+    font-size: 2rem;
     margin-bottom: 15px;
 }
 
-.trainer-yaroslav-text-container p {
+.trainer-text-container p {
     font-family: 'Montserrat';
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: lighter;
     letter-spacing: 1px;
     line-height: 18px;
 }
 
-
-
-
-/* ---------------- Цитата секция -------------------- */
-
-
-.yaroslav-quote-content {
+.trainer-quote-yaroslav{
     background: url('../src/img/coaching-staff/yaroslav-quote-background.png') no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    height: 45vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Montserrat';
-    padding: 0 30vw;
+
 }
 
-.yaroslav-quote-content :first-child p {
-    font-size: 18px;
-    text-align: center;
-    color: #e2e2e2;
-    margin-bottom: 25px;
+
+/* ----------------- Адаптивность Ярослав секция -----------------*/
+@media (max-width: 475px) {
+
+    .trainer-text-container p {
+        font-size: 0.8rem;
+    }
+    .trainer-image-container{
+        background: none;
+    }
+
+    .trainer-yaroslav-image-container::before {
+        content: none;
+    }
+
+    .trainer-yaroslav-image-container::after {
+        content: none;
+    }
+
+    .section-trainer-yaroslav {
+        padding: 0 1.5rem;
+        margin: 0 1rem;
+        background: #9C1E1E;
+        height: 40vh;
+    }
+
+    .trainer-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100%;
+    }
+
+    .trainer-yaroslav-image-container {
+        width: 40vw;
+        background: none;
+    }
+
+    .trainer-text-container {
+        padding: 0;
+        width: 100%;
+        background: none;
+    }
+    .trainer-yaroslav-image-container img {
+        right: -15%;
+        height: 36vh;
+    }
+    .trainer-text-container p {
+         letter-spacing: normal;
+    }
+
+    .section-trainer-quote{
+        padding: 0 1rem;
+    }
+
+    .trainer-quote  {
+        height: 30vh;
+        padding: 0;
+    }
+    .trainer-quote p {
+        font-size: 1rem;
+    }
+    .trainer-quote cite {
+        font-size: 0.9rem;
+    }
 }
 
-.yaroslav-quote-content :last-child p {
-    font-size: 14px;
-    text-align: center;
-    color: #ffffff;
+@media (max-width: 380px) {
+    .trainer-text-container h2 {
+        font-size: 1.2rem;
+    }
+    .trainer-text-container p {
+        font-size: 0.7rem;
+        line-height: normal;
+    }
+    .trainer-yaroslav-image-container img {
+        right: 10%;
+    }
 }
+
 
 /* ------------------------- Ирина секция ------------------------- */
 
-.trainer-irina-content {
-    display: flex;
-    flex-direction: row;
-    height: 45vh;
-}
 
 
-.trainer-irina-text-container {
-    background: #9C1E1E;
-    display: flex;
-    flex-direction: column;
+.trainer-text-container-irina {
     padding: 0 110px;
-    justify-content: center;
     position: relative;
-    /* width: 150vw; */
 }
-
-.trainer-irina-text-container h2 {
-    font-family: 'Roboto-Condensed';
-    font-size: 26px;
-    margin-bottom: 15px;
-}
-
-.trainer-irina-text-container p {
-    font-family: 'Montserrat';
-    font-size: 14px;
-    font-weight: lighter;
-    letter-spacing: 1px;
-    line-height: 18px;
-}
-
 .trainer-irina-image-container {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background: #fff;
     width: 200vw;
 }
-
 .trainer-irina-image-container img {
-    position: absolute;
-    bottom: 0;
     left: 15vw;
-    height: 55vh;
-
 }
 
-
-
-.trainer-irina-text-container::before {
+.trainer-text-container-irina::before {
     content: '';
     position: absolute;
     top: 0;
@@ -200,7 +244,7 @@ h1 {
 
 }
 
-.trainer-irina-text-container::after {
+.trainer-text-container-irina::after {
     content: '';
     position: absolute;
     top: 0;
@@ -211,42 +255,199 @@ h1 {
     background: #9C1E1E;
     transform: skewX(-20deg);
     transform-origin: right;
-
-
 }
-
-
-
-/* ----------------------- Ирина цитата ---------------------  */
 
 .irina-quote-section {
     padding-bottom: var(--padding-beteen-sections);
 }
 
-.irina-quote-content {
+.trainer-quote-irina {
     background: url('../src/img/coaching-staff/irina-quote-background.png') no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    height: 45vh;
+}
+
+
+/* ----------------------- Адаптивность Ирина секция ----------------------- */
+
+@media (max-width: 475px) {
+    .trainer-text-container-irina::before {
+        content: none;
+    }
+
+    .trainer-text-container-irina::after {
+        content: none;
+    }
+    .section-trainer-irina{
+        padding: 0 1.5rem;
+        margin: 0 1rem;
+        background: #9C1E1E;
+        height: 40vh;
+    }
+    .trainer-text-container-irina {
+        padding: 0;
+        position: relative;
+    }
+    .trainer-irina-image-container {
+        left: 0;
+        width: auto;
+    }
+    .trainer-irina-image-container img {
+        height: 32vh;
+        left: -12vw;
+    }
+}
+
+/* ----------------------- Елена Ковалёва ------------------------- */
+.trainer-quote-elena{
+    background: url('../src/img/coaching-staff/elena_kovaleva_background_quote.jpg') no-repeat;
+}
+
+@media (max-width: 475px) {
+    .trainer-elena-image-container img{
+        right: 0;
+        bottom: 15%;
+        height: 28vh;
+    }
+}
+
+/* ------------------------ Тренеры-инструкторы ----------------*/
+
+
+.horizontal-instructors{
+    border: 0;
+    margin: 7rem auto;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.404);
+    width: 70vw;
+    border-radius: 12px;
+    align-self: center;
+}
+
+.section-trainers-instructors > header{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+    margin: 0 auto;
+}
+.section-trainers-instructors > header img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.section-trainers-instructors > header h2{
+    font-size: 2.25rem;
+    margin: 0;
+    font-family: 'Roboto-Condensed';
+}
+.section-trainers-instructors > header p{
+    font-size: 1.25rem;
+    margin: 0;
+    font-family: 'Montserrat';
+}
+.trainers-instructors-left{
+    height: 100%;
+}
+.trainers-instructors-right{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Montserrat';
-    padding: 0 30vw;
+    gap: 1rem;
+}
+.trainers-instructors-bottom-img{
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
 }
 
-.irina-quote-content :first-child p {
-    font-size: 18px;
-    text-align: center;
-    color: #e2e2e2;
-    margin-bottom: 25px;
+
+
+@media (max-width: 475px) {
+    .horizontal-instructors{
+        margin: 3rem auto;
+    }
+    .section-trainers-instructors{
+        padding: 0 1rem;
+    }
+    .section-trainers-instructors > header{
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+        gap: 1rem;
+        margin-bottom: 4.5rem;
+    }
+    .section-trainers-instructors > header h2{
+        font-size: 2.25rem;
+    }
+    .section-trainers-instructors > header p{
+        font-size: 1rem;
+    }
+    .trainers-instructors-left img{
+    max-height: 40vh;
+        border-radius: 2rem;
+    }
+    .trainers-instructors-bottom-img {
+        position: absolute;
+        width: 80%;
+        right: 0;
+        top: 75%;
+        border-radius: 0 32px 32px 32px;
+    }
+
+    .trainers-instructors-bottom-img img{
+        border-radius: 0 2rem 2rem 2rem;
+    }
 }
 
-.irina-quote-content :last-child p {
-    font-size: 14px;
-    text-align: center;
-    color: #ffffff;
+
+/* --------------------------- тренеры-инструкторы --------------------------*/
+.article-trainers-instructors{
+    padding: 5rem 0;
 }
+
+.article-trainers-instructors header{
+    background: #fff;
+    align-content: end;
+}
+.header-text-maxim{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background: #ffffff;
+    height: 45vh;
+    /*max-width: 1000px;*/
+    margin: 0 auto;
+    position: relative;
+    overflow: visible;
+}
+.image-trainer-instructor{
+    width: 100%;
+    height: auto;
+    display: block;
+
+    position: relative;
+    /*margin-top: -60px;*/
+    z-index: 2;
+}
+.image-trainer-instructor img{
+    height: 55vh;
+}
+
+.trainers-instructors-info{
+    /*height: fit-content;*/
+    /*align-self: anchor-center;*/
+    background-color: #9C1E1E;
+    /*padding: 40px 80px 80px 80px;*/
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+    margin-left: -50px;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
