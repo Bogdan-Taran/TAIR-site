@@ -73,6 +73,7 @@ h1 {
     display: flex;
     flex-direction: row;
     height: 45vh;
+    background: #fff;
 }
 
 .trainer-yaroslav-image-container {
@@ -90,32 +91,10 @@ h1 {
     padding: 0 120px;
     justify-content: center;
     width: 150vw;
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
 }
 
-.trainer-yaroslav-image-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 80%;
-    height: 100%;
-    background: transparent;
-    transform: skewX(-20deg);
-    transform-origin: left;
 
-}
-
-.trainer-yaroslav-image-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -5vw;
-    width: 10vw;
-    height: 100%;
-    background: #9C1E1E;
-    transform: skewX(-20deg);
-    transform-origin: right;
-}
 
 .trainer-text-container h2 {
     font-family: 'Roboto-Condensed';
@@ -147,13 +126,6 @@ h1 {
         background: none;
     }
 
-    .trainer-yaroslav-image-container::before {
-        content: none;
-    }
-
-    .trainer-yaroslav-image-container::after {
-        content: none;
-    }
 
     .section-trainer-yaroslav {
         padding: 0 1.5rem;
@@ -166,6 +138,7 @@ h1 {
         display: grid;
         grid-template-columns: 1fr 1fr;
         height: 100%;
+        background: none;
     }
 
     .trainer-yaroslav-image-container {
@@ -177,6 +150,7 @@ h1 {
         padding: 0;
         width: 100%;
         background: none;
+        clip-path: none;
     }
     .trainer-yaroslav-image-container img {
         right: -15%;
@@ -193,6 +167,8 @@ h1 {
     .trainer-quote  {
         height: 30vh;
         padding: 0;
+        background-size: cover;
+        background-position: center;
     }
     .trainer-quote p {
         font-size: 1rem;
@@ -223,6 +199,7 @@ h1 {
 .trainer-text-container-irina {
     padding: 0 110px;
     position: relative;
+    clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 0% 100%);
 }
 .trainer-irina-image-container {
     width: 200vw;
@@ -231,31 +208,9 @@ h1 {
     left: 15vw;
 }
 
-.trainer-text-container-irina::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 80%;
-    height: 100%;
-    background: transparent;
-    transform: skewX(-20deg);
-    transform-origin: left;
 
-}
 
-.trainer-text-container-irina::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -5vw;
-    z-index: 1;
-    width: 10vw;
-    height: 100%;
-    background: #9C1E1E;
-    transform: skewX(-20deg);
-    transform-origin: right;
-}
+
 
 .irina-quote-section {
     padding-bottom: var(--padding-beteen-sections);
@@ -269,13 +224,6 @@ h1 {
 /* ----------------------- Адаптивность Ирина секция ----------------------- */
 
 @media (max-width: 475px) {
-    .trainer-text-container-irina::before {
-        content: none;
-    }
-
-    .trainer-text-container-irina::after {
-        content: none;
-    }
     .section-trainer-irina{
         padding: 0 1.5rem;
         margin: 0 1rem;
@@ -294,6 +242,10 @@ h1 {
         height: 32vh;
         left: -12vw;
     }
+    .trainer-quote-irina{
+        background-size: cover;
+        background-position: center;
+    }
 }
 
 /* ----------------------- Елена Ковалёва ------------------------- */
@@ -302,12 +254,19 @@ h1 {
 }
 
 @media (max-width: 475px) {
-    .trainer-elena-image-container img{
+    .trainer-elena-image-container img {
         right: 0;
-        bottom: 15%;
         height: 28vh;
     }
+    .section-trainer-elena{
+        height: 35vh;
+    }
+    .trainer-quote-elena, .trainer-quote-maxim, .trainer-quote-savely{
+        background-size: cover;
+        background-position: center;
+    }
 }
+
 
 /* ------------------------ Тренеры-инструкторы ----------------*/
 
@@ -496,6 +455,23 @@ grid-template-columns: 1fr 1fr;
     }
     .trainers-instructors-info-savely {
         padding-left: 5%;
+    }
+    .article-trainers-instructors header {
+        background: #9C1E1E;
+    }
+    .article-trainers-instructors-savely{
+        padding-bottom: 1rem;
+    }
+    .trainer-quote-savely{
+        background-size: cover;
+        background-position: center;
+    }
+    .trainer-quote-maxim{
+        background-size: cover;
+        background-position: block-start;
+    }
+    .article-trainers-instructors header {
+        height: 40vh;
     }
 }
 
