@@ -399,15 +399,16 @@ h1 {
 
 
 /* --------------------------- тренеры-инструкторы --------------------------*/
-.article-trainers-instructors{
-    padding: 5rem 0;
+
+.article-trainers-instructors-maksim{
+    padding-top: 10rem;
 }
 
 .article-trainers-instructors header{
     background: #fff;
     align-content: end;
 }
-.header-text-maxim{
+.header-text-trainers-instructors, .header-text-maxim{
     display: grid;
     grid-template-columns: 1fr 2fr;
     background: #ffffff;
@@ -420,7 +421,8 @@ h1 {
 .image-trainer-instructor{
     width: 100%;
     height: auto;
-    display: block;
+    display: flex;
+    justify-content: center;
 
     position: relative;
     /*margin-top: -60px;*/
@@ -428,16 +430,38 @@ h1 {
 }
 .image-trainer-instructor img{
     height: 55vh;
+    position: absolute;
+    bottom: 0;
 }
 
 .trainers-instructors-info{
-    /*height: fit-content;*/
-    /*align-self: anchor-center;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: #9C1E1E;
-    /*padding: 40px 80px 80px 80px;*/
     clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
     margin-left: -50px;
     z-index: 1;
+    height: inherit;
+    padding: 0 20%;
+    gap: 1rem;
+}
+.trainers-instructors-info-savely{
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+}
+.trainers-instructors-info p{
+    font-size: 1rem;
+    margin: 0;
+    font-family: 'Montserrat';
+}
+.trainers-instructors-info h3{
+    font-size: 2rem;
+    margin: 0;
+    font-family: 'Roboto-Condensed';
+}
+
+.trainer-quote-maxim{
+    background: url('../src/img/coaching-staff/trainers-instructors-quote-maksim.jpg') no-repeat;
 }
 
 
