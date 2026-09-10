@@ -403,12 +403,15 @@ h1 {
 .article-trainers-instructors-maksim{
     padding-top: 10rem;
 }
+.article-trainers-instructors-savely{
+    padding-bottom: 10rem;
+}
 
 .article-trainers-instructors header{
     background: #fff;
     align-content: end;
 }
-.header-text-trainers-instructors, .header-text-maxim{
+.header-text-trainers-instructors, .header-text-trainers-instructors-maxim{
     display: grid;
     grid-template-columns: 1fr 2fr;
     background: #ffffff;
@@ -447,7 +450,8 @@ h1 {
     gap: 1rem;
 }
 .trainers-instructors-info-savely{
-    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 0% 100%);
+    margin-left: 0;
 }
 .trainers-instructors-info p{
     font-size: 1rem;
@@ -463,7 +467,46 @@ h1 {
 .trainer-quote-maxim{
     background: url('../src/img/coaching-staff/trainers-instructors-quote-maksim.jpg') no-repeat;
 }
+.trainer-quote-savely{
+    background: url('../src/img/coaching-staff/trainers-instructors-quote-savely.jpg') no-repeat;
+}
+.header-text-trainers-instructors-savely{
+grid-template-columns: 1fr 1fr;
+}
 
+@media (max-width: 475px) {
+    .image-trainer-instructor img {
+        height: 36vh;
+        right: 15%;
+    }
+    .header-text-trainers-instructors-maxim {
+        grid-template-columns: 1fr 1fr;
+        height: 40vh;
+    }
+
+    .trainers-instructors-info p{
+        font-size: 0.7rem;
+    }
+    .trainers-instructors-info h3{
+        font-size: 1rem;
+    }
+    .trainers-instructors-info {
+        padding: 0;
+        padding-left: 15%;
+    }
+    .trainers-instructors-info-savely {
+        padding-left: 5%;
+    }
+}
+
+@media (max-width: 380px) {
+    .trainers-instructors-info p{
+        font-size: 0.55rem;
+    }
+    .trainers-instructors-info h3{
+        font-size: 0.8rem;
+    }
+}
 
 
 
