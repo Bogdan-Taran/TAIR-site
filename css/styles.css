@@ -32,6 +32,11 @@ html {
   background: #c00;
 }
 
+h1{
+  font-size: 4rem;
+  font-family: 'Roboto-Condensed';
+}
+
 
 
 @media (hover: none) and (pointer: coarse) {
@@ -58,6 +63,7 @@ html {
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
   letter-spacing: 1px;
+  text-decoration: none;
 }
 .button-base:hover {
   transform: scale(1.05);
