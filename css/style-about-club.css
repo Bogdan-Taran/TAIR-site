@@ -6,8 +6,7 @@ body {
 }
 
 .about-club-paragraph {
-    font-family: 'Montserrat';
-    /*max-width: 30vw;*/
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     font-weight: 100;
     color: #e6e6e6;
@@ -446,9 +445,7 @@ p{
         width: auto;
     }
     .what-awaits-you-header {
-        .what-awaits-you-header {
-            gap: 1rem;
-        }
+        gap: 1rem;
     }
     .cta-button-what-awaits-you{
         display: block;

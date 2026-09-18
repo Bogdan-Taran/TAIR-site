@@ -1,0 +1,171 @@
+html {
+    font-size: 16px;
+}
+body {
+    -webkit-font-smoothing: antialiased;
+    background-color: #121212;
+}
+main{
+    padding: 0 var(--padding-page);
+}
+h1{
+    font-family: 'Montserrat';
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 4.8rem;
+}
+h2{
+    font-family: 'Montserrat';
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3rem;
+}
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    max-width: 40vw;
+}
+
+
+/* --------------- header -----------------*/
+
+.header-summer-camp-2026 {
+    padding: 0 var(--padding-page);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../src/img/summer-camp-2026/summer-camp-2026-hero-photo.jpg') no-repeat center;
+    background-size: cover;
+    height: 90vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 2rem;
+    box-shadow: 0px -250px 120px 50px rgba(0, 0, 0, 0.3) inset;
+    position: relative;
+}
+.header-summer-camp-2026 img{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 10%;
+}
+.header-summer-camp-2026 p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    max-width: 40vw;
+}
+.header-summer-camp-2026 a{
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: white;
+}
+.header-links-summer-camp-2026{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 5rem;
+}
+.header-links-summer-camp-2026 a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.header-links-summer-camp-2026 a:hover{
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+    font-weight: 600;
+    box-shadow: 0px 0px 50px 2px #9d040d4d;
+}
+
+
+.camp-with-tait-that{
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 2rem 0;
+}
+/* ---------------------- Начало дня ------------------------*/
+
+.article-day-beginning{
+    padding: 10rem 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: center;
+    gap: 5rem;
+}
+.article-day-beginning header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+.day-beginning-photos{
+    display: flex;
+    gap: 1.2rem;
+    min-width: 0;
+}
+.day-beginning-photos > img, .day-beginning-two-photos{
+    flex: 1 1 0;
+    min-width: 0;
+}
+.day-beginning-two-photos{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.day-beginning-photos img, .day-beginning-two-photos img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.article-day-beginning header p{
+    max-width: 40vw;
+    color: #C9C9C9;
+}
+
+
+/* --------------------------- мероприятия в лагере ---------------------------*/
+.article-camp-events{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5rem;
+}
+.camp-events-photos{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-width: 0;
+}
+.camp-events-two-photos, .camp-events-three-photos{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    min-width: 0;
+}
+.camp-events-two-photos img, .camp-events-three-photos img{
+    display: block;
+    min-width: 0;
+    flex: 1 1 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.header-camp-events{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 20%;
+}
