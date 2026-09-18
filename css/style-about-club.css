@@ -1,10 +1,13 @@
 html {
     font-size: 16px;
 }
+body {
+    -webkit-font-smoothing: antialiased;
+}
 
 .about-club-paragraph {
     font-family: 'Montserrat';
-    max-width: 30vw;
+    /*max-width: 30vw;*/
     font-size: 1.5rem;
     font-weight: 100;
     color: #e6e6e6;
@@ -27,6 +30,11 @@ html {
 h1 {
     text-align: start;
 }
+h2{
+    font-size: 3rem;
+    font-family: 'Roboto-Condensed';
+    font-weight: 800;
+}
 p{
     font-size: 1.25rem;
     font-family: 'Montserrat';
@@ -35,6 +43,7 @@ p{
 .cta-button-about-club-sign-up{
     margin-top: 1rem;
     display: inline-block;
+    text-align: center;
 }
 
 .about-club-hero-photo-container{
@@ -94,6 +103,13 @@ p{
     .about-club-hero-text-container::after {
         content: none;
     }
+    .about-club-hero-text-container h1 br{
+        display: none;
+    }
+    .cta-button-about-club-sign-up{
+        width: auto;
+    }
+
 }
 
 
@@ -104,7 +120,7 @@ p{
 
 .what-we-do-section {
     background-color: #121212;
-    padding: 5rem 0;
+    padding: 5rem var(--padding-page);
 }
 
 .what-we-do-content {
@@ -171,7 +187,34 @@ p{
 .what-we-do-text h2 {
     font-size: 3rem;
     font-family: 'Roboto-Condensed';
-    font-weight: 100;
+    font-weight: 900;
+}
+.what-we-do-mobile-image{
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .what-we-do-section {
+        padding: 5rem 1.5rem;
+    }
+    .what-we-do-text {
+        align-items: center;
+    }
+    .what-we-do-content {
+        flex-direction: column-reverse;
+    }
+    .what-we-do-photos::before {
+        content: none;
+    }
+    .what-we-do-mobile-image{
+        display: block;
+    }
+    .what-we-do-mobile-image img{
+        border-radius: 1.5rem;
+    }
+    .what-we-do-photos {
+        display: none;
+    }
 }
 
 
@@ -181,7 +224,7 @@ p{
 
 .tair-beginning-section {
     background-color: #121212;
-    padding: 5rem 0;
+    padding: 5rem var(--padding-page);
 }
 
 .tair-beginning-content {
@@ -202,13 +245,13 @@ p{
     width: 100%;
 }
 
-.tair-beginning-photo-and-text :nth-child(2) {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    align-items: flex-start;
-    flex: 0 0 60%;
-}
+/*.tair-beginning-photo-and-text :nth-child(2) {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    gap: 3rem;*/
+/*    align-items: flex-start;*/
+/*    flex: 0 0 60%;*/
+/*}*/
 
 
 .tair-beginning-photo-and-text h2 {
@@ -234,13 +277,54 @@ p{
     border-radius: 0.9rem;
     width: 100%;
 }
+.tair-beginning-two-photos{
+    display: none;
+}
+#tair-beginning-h2-mobile{
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .tair-beginning-three-photos {
+        display: none;
+    }
+    .tair-beginning-section {
+        background-color: #121212;
+        padding: 5rem 1.5rem;
+    }
+    .tair-beginning-photo-and-text {
+        flex-direction: column;
+    }
+    .tair-beginning-three-photos-mobile{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .tair-beginning-two-photos {
+        display: grid;
+    }
+    .tair-beginning-two-photos img {
+        height: 90%;
+    }
+    .tair-beginning-photo-and-text>div img {
+        width: 90%;
+    }
+    #tair-beginning-h2-desktop{
+        display: none;
+    }
+    #tair-beginning-h2-mobile{
+        display: block;
+    }
+    .tair-beginning-photo-and-text p {
+        max-width: 100%;
+    }
+}
 
 
 /* ------------------- ТАИР сегодня ---------------------- */
 
 .tair-today-section{
     background-color: #121212;
-    padding: 5rem 0;
+    padding: 5rem var(--padding-page);
 }
 
 .tair-today-content{
@@ -258,15 +342,13 @@ p{
 .tair-today-text-container h2{
     font-size: 3rem;
     font-family: 'Roboto-Condensed';
-    font-weight: 100;
+    font-weight: 800;
     text-align: center;
 }
 .tair-today-text-container p{
     text-align: center;
     max-width: 70vw;
 }
-
-
 
 .tair-today-photos-container{
     display: flex;
@@ -284,6 +366,97 @@ p{
     object-position: center;
     display: block;
 }
+
+@media (max-width: 480px) {
+    .tair-today-section{
+        padding: 5rem 1.5rem;
+    }
+    .tair-today-content {
+        gap: 2rem;
+    }
+    .tair-today-text-container{
+        gap: 1rem;
+    }
+    .tair-today-text-container h2{
+        font-weight: 900;
+        text-align: start;
+    }
+    .tair-today-text-container p {
+        text-align: start;
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+/* -------------------------- Секция что вас ждёт -------------------------*/
+
+.what-awaits-you{
+    background-color: #121212;
+    padding: 5rem 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+}
+.what-awaits-you-photos{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+}
+.what-awaits-you-photos img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+.what-awaits-you-header{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+.what-awaits-you-header img{
+    width: 100%;
+}
+.cta-button-what-awaits-you{
+    text-align: center;
+    padding: .8rem 2rem;
+    font-size: 1.8rem;
+    border-radius: 1rem;
+}
+
+
+
+
+
+@media (max-width: 480px) {
+    .what-awaits-you {
+        display: block;
+    }
+    .what-awaits-you{
+        padding: 5rem 1rem;
+    }
+    .what-awaits-you-photos {
+        display: none;
+    }
+    .cta-button-about-club-sign-up {
+        width: auto;
+    }
+    .what-awaits-you-header {
+        .what-awaits-you-header {
+            gap: 1rem;
+        }
+    }
+    .cta-button-what-awaits-you{
+        display: block;
+    }
+}
+
+
+
 
 
 
